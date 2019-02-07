@@ -2,13 +2,13 @@
 
 Sparkitecture is a series of solutions aimed at cutting down development time at project launch by providing a ready-to-use fullstack template
 
-|Build|Status|
-|:---|-----:|
-|Sparkitecture-CI|![TFS Build Status](https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/150/badge)|
-|Sparkitecture-Publish-Server|*(unavailible)*|
-|Mobile - CI|*(unavailible)*|
-|Mobile - Release - DEV|*(unavailible)*|
-|Mobile - Release - QA|*(unavailible)*|
+| Build                        |                                                                                                                                   Status |
+| :--------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------: |
+| Sparkitecture-CI             | ![TFS Build Status](https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/150/badge) |
+| Sparkitecture-Publish-Server |                                                                                                                          *(unavailible)* |
+| Mobile - CI                  |                                                                                                                          *(unavailible)* |
+| Mobile - Release - DEV       |                                                                                                                          *(unavailible)* |
+| Mobile - Release - QA        |                                                                                                                          *(unavailible)* |
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -153,11 +153,12 @@ This builds and serves your app, rebuilding on file changes
 - Create Table in Database\dbo\Tables
 - Create View in Database\dbo\Views
 - Publish Profile from Database\PublishProfiles
-- Create SearchRow Class in Core\Models\SearchRows 
-  - Above each searchable string property add:
-   ``` c#
-   [SearchCriteriaParameterConfiguration(ComparisonOperator = ComparisonOperator.Contains)]
-   ```
+- Create SearchRow Class in Core\Models\SearchRows
+- Above each searchable string property add:
+
+``` c#
+[SearchCriteriaParameterConfiguration(ComparisonOperator = ComparisonOperator.Contains)]
+```
 
 - Create Base Class in Core\Models
 - Add a Dictionary Mapping Reference to DataAccess\Search\SearchTypeToEntityFrameworkTypeProvider.cs
