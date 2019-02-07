@@ -24,6 +24,7 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
     - [Running the web app](#running-the-web-app)
       - [Running with the Angular CLI](#running-with-the-angular-cli)
 - [Common Operations](#common-operations)
+  - [Adding a Search Row](#adding-a-search-row)
 - [Deployment](#deployment)
 - [Built With](#built-with)
 - [Versioning](#versioning)
@@ -146,9 +147,30 @@ This builds and serves your app, rebuilding on file changes
 
 ## Common Operations
 
-``` comment
-placeholder
-```
+### Adding a Search Row
+
+- Create Table in SSMS
+- Create Table in Database\dbo\Tables
+- Create View in Database\dbo\Views
+- Publish Profile from Database\PublishProfiles
+- Create SearchRow Class in Core\Models\SearchRows 
+  - Above each searchable string property add:
+   ``` c#
+   [SearchCriteriaParameterConfiguration(ComparisonOperator = ComparisonOperator.Contains)]
+   ```
+
+- Create Base Class in Core\Models
+- Add a Dictionary Mapping Reference to DataAccess\Search\SearchTypeToEntityFrameworkTypeProvider.cs
+- Add DBSet For SearchRow Class in DataAccess\Contexts\SparkitectureDBContext.cs
+- Create new Component folder for search page in Web\ClientApp\src\app\components
+  - The new folder will need the associated .ts .html and .scss files which can be found in Web\ClientApp\src\app\components\examples\search-grid-format-example folder
+  - You can copy these files and paste them into the folder you created
+    - Change the search-grid-format-example portion of the name to the name of the new folder
+- In the new .ts file remove any unnecessary code and update the Component Decorator with the correct name and update the Class name
+- In the new .html file remove any unnecessary code and update the title and list
+- Add an import and Export to Web\ClientApp\src\app\components\index.ts
+- Add an Import and a Declaration to Web\ClientApp\src\app\app.module.ts
+- Add Import and routing functionality to Web\ClientApp\src\app\app-routing.module.ts
 
 ## Deployment
 
@@ -183,12 +205,12 @@ placeholder
 
 ## License
 
-**Example**: This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+``` comment
+placeholder
+```
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Coffee
-- Mom
-- Inspirational kitten posters
-- The Croatian Armed Forces
+``` comment
+placeholder
+```
