@@ -1,4 +1,4 @@
-# ![Sparkitecture](./navbar-logo.png "Sparkitecture") <!-- omit in toc -->
+# ![Sparkitecture](./Images/navbar-logo.png "Sparkitecture") <!-- omit in toc -->
 
 Sparkitecture is a series of solutions aimed at cutting down development time at project launch by providing a ready-to-use fullstack template
 
