@@ -25,6 +25,7 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
       - [Running with the Angular CLI](#running-with-the-angular-cli)
 - [Common Operations](#common-operations)
   - [Adding a Search Row](#adding-a-search-row)
+  - [Create a New Component](#create-a-new-component)
 - [Deployment](#deployment)
 - [Built With](#built-with)
 - [Versioning](#versioning)
@@ -172,6 +173,29 @@ This builds and serves your app, rebuilding on file changes
 - Add an import and Export to Web\ClientApp\src\app\components\index.ts
 - Add an Import and a Declaration to Web\ClientApp\src\app\app.module.ts
 - Add Import and routing functionality to Web\ClientApp\src\app\app-routing.module.ts
+
+### Create a New Component
+
+- Open a command prompt
+- Change directory to the component folder
+- Replace `[componentName]` and type the following command in your command prompt:
+
+  ```angularcli
+  ng generate c [componentName]
+  ```
+
+- A new folder with you component name will be created under the component folder
+- This new folder contains 4 files:
+  - componentName.component.ts
+    - This is a Typescript file which will contain client-side logic
+  - componentName.component.spec.ts
+    - This is a Karma test file
+      - This file can be removed if tests **will not** be written for this component
+  - componentName.component.scss
+    - This is a Sassy CSS file where you can add Sass or CSS exclusive to this component
+  - componentName.component.html
+    - This a HTML file where the UI is created
+- This command also imports and declares your new component in app.module.ts
 
 ## Deployment
 
