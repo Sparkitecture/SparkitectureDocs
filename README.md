@@ -31,7 +31,7 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
 - [Versioning](#versioning)
 - [Contributors](#contributors)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
+- [Angular CLI Cheat Sheet](#angular-cli-cheat-sheet)
 
 ## Getting Started
 
@@ -234,8 +234,22 @@ placeholder
 placeholder
 ```
 
-## Acknowledgments
+## Angular CLI Cheat Sheet
 
-``` comment
-placeholder
-```
+| Command | Alias | Description |
+| :-----: | :---: | :---------- |
+| [add](https://angular.io/cli/add) | | Adds support for an external library to your project. |
+| [build](https://angular.io/cli/build) | b | Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory.|
+| [config](https://angular.io/cli/config) | | Retrieves or sets Angular configuration values in the angular.json file for the workspace. |
+| [doc](https://angular.io/cli/doc) | d | Opens the official Angular documentation [angular.io](angular.io) in a browser, and searches for a given keyword. |
+| [e2e](https://angular.io/cli/e2e) | e | Builds and serves an Angular app, then runs end-to-end tests using Protractor. |
+| [generate](https://angular.io/cli/generate) | g | Generates and/or modifies files based on a schematic. |
+| [help](https://angular.io/cli/help) |  | Lists available commands and their short descriptions. |
+| [lint](https://angular.io/cli/lint) | l | Runs linting tools on Angular app code in a given project folder. |
+| [new](https://angular.io/cli/new) | n | Creates a bew workspace and an Angular app |
+| [serve](https://angular.io/cli/serve) | s | Builds and serves your app, rebuilding on file changes. |
+| [run](https://angular.io/cli/run) |  | Runs an Architect target with an optional custom builder configuration defined in your project. |
+| [test](https://angular.io/cli/test) | t | Runs unit tests in a project. |
+| [update](https://angular.io/cli/update) |  | Updates your application and its dependencies. See [here](https://update.angular.io/) |
+| [version](https://angular.io/cli/version) | v | Outputs Angular CLI version. |
+| [xi18n](https://angular.io/cli/xi18n) |  | Extracts i18n messages from source code. |
