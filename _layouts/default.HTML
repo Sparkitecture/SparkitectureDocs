@@ -27,8 +27,11 @@
 <body>
   
       {% if site.logo %}
-      <a class="logo" href="{{ "/" | absolute_url }}" >
-      <img src="{{site.logo | relative_url}}" alt="Logo" /></a>
+      <div class="logoWrapper" >
+        <a class="logo" href="{{ "/" | absolute_url }}" >
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        </a>
+      </div>
       {% endif %}
   <nav id="sparkitectureNav" class="navbar navbar-light" >
       <nav class="nav nav-pills flex-column">

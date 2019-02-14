@@ -29,7 +29,11 @@
 } 
 
 .logo{
-    margin:0 auto;
+    margin: 0 auto;
+}
+
+.logoWrapper{
+    width: 100%;
 }
 
 .githubBottom {    
