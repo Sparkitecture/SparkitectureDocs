@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,7 +34,6 @@
       {% endif %}
   <nav id="sparkitectureNav" class="navbar navbar-light" >
       <nav class="nav nav-pills flex-column">
-          <!-- <a class="nav-link" href="{{ "#table-of-contents-" | absolute_url }}">Table of Contents</a> -->
           <a class="nav-link" href="{{ "#" | absolute_url }}">Sparkitecture</a>
           <a class="nav-link" href="{{ "#getting-started" | absolute_url }}">Getting Started</a>
           <nav class="nav nav-pills flex-column">
@@ -80,53 +78,22 @@
           <a class="nav-link" href="{{ "#angular-cli-cheat-sheet" | absolute_url }}">Angular CLI Cheat Sheet</a>      
         </nav>
   </nav>
-  
+
  {{% if site. %}}
     <div class="container-lg px-3 my-5 markdown-body">
-      <!-- {% if site.title and site.title != page.title %} -->
-      <!-- <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1> -->
-      <!-- {% endif %} -->
 
       {{ content }}
 
-      <!-- <button onclick="topFunction()" id="btnTop" title="Go to top">Top</button> -->
       {% if site.github.private != true %}
       <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
           <a href="{% github_edit_link %}" ><img class="githubBottom" src="./Assets/Images/OctocatHelp-sm.jpg" /></a>
       </div>
       {% endif %}
     </div>
-
-  <!-- <script>
-    window.onscroll = function () { scrollFunction() };
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("btnTop").style.display = "block";
-      } else {
-        document.getElementById("btnTop").style.display = "none";
-      }
-    }
-    function topFunction() {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-  </script> -->
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
     integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
   <script>anchors.add();</script>
   {% if site.google_analytics %}
-  <!-- <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', '{{ site.google_analytics }}', 'auto');
-    ga('send', 'pageview');
-  </script> -->
   {% endif %}
 </body>
-
 </html>
