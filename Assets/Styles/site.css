@@ -27,7 +27,6 @@
     top: 0;
 }
 
-
 .githubBottom {    
     position: fixed;
     bottom: 0px;
@@ -36,4 +35,8 @@
     border: none;
     outline: none;
     cursor: pointer;
-  }
+}
+
+body { 
+    padding-top: 65px; 
+}
