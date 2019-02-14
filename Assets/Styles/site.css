@@ -60,31 +60,13 @@
     vertical-align: top;
 }
 
-.parentLink{
+/* .parentLink{
     display: inline-block;
     vertical-align: top;
 }
 
-/* a {
-    position: relative;
-  }
-  a:after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border: 2px solid;
-    border-color: #979492;
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    border-left: 0;
-    border-bottom: 0;
-    margin-top: 5px;
-    margin-left: 5px;
-  } */
   a {
     display: inline;
     -ms-flex-direction: row !important;
     flex-direction: row !important;
-  }
+  } */
