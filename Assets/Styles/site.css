@@ -19,13 +19,18 @@
   background-color: rgb(0, 56, 48);
 }
 
-/* #sparkitectureNav{
+ #sparkitectureNav{
     position: fixed;
     background-color: white;    
-    width: 100%;       
+    top: 10px;
+    left: 5px;       
     z-index: 9;    
     top: 0;
-} */
+} 
+
+.logo{
+    margin:0 auto;
+}
 
 .githubBottom {    
     position: fixed;
