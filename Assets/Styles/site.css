@@ -20,8 +20,7 @@
 }
 
 
-#githubBottom {
-    
+.githubBottom {    
     position: fixed;
     bottom: 20px;
     left: 30px;
