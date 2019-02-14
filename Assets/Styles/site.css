@@ -49,3 +49,7 @@
     cursor: pointer;
 }
 
+.nav-link{
+    padding: none !important;
+}
+
