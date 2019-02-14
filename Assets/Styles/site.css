@@ -56,11 +56,13 @@
 }
 
 .indicator{
-    
+    display: inline-block;
+    vertical-align: top;
 }
 
 .parentLink{
-    display: flex !important;
+    display: inline-block;
+    vertical-align: top;
 }
 
 /* a {
