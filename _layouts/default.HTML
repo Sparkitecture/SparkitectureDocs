@@ -25,27 +25,30 @@
 </head>
 
 <body>
-  <nav id="sparkitectureNav" class="navbar navbar-light" >
+  
       {% if site.logo %}
       <a class="navbar-brand" href="{{ "/" | absolute_url }}" >
       <img src="{{site.logo | relative_url}}" alt="Logo" /></a>
       {% endif %}
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link" href="{{ "#getting-started" | absolute_url }}" >Getting Started</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#prerequisites">Prerequisites</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-          aria-expanded="false">Prerequisites</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#installing-prerequisites">Installing Prerequisites</a>
-          <a class="dropdown-item" href="#installing-nodejs-and-npm">Installing Node.js and npm</a>
-          <a class="dropdown-item" href="#installing-the-angular-cli">Installing the Angular CLI</a>
-      </li>
-    </ul>
+  <nav id="sparkitectureNav" class="navbar navbar-light" >
+      <nav class="nav nav-pills flex-column">
+          <a class="nav-link" href="{{ "#table-of-contents" | absolute_url }}">Table of Contents</a>
+          <a class="nav-link" href="{{ "#getting-started" | absolute_url }}">Getting Started</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ml-3 my-1" href="#prerequisites">Prerequisites</a>
+            <a class="nav-link ml-3 my-1" href="#installing-prerequisites">Installing Prerequisites</a>
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link ml-3 my-1" href="#installing-nodejs-and-npm">Installing Node.js and npm</a>
+                <a class="nav-link ml-3 my-1" href="#installing-the-angular-cli">Installing the Angular CLI</a>
+            </nav>
+          </nav>
+          <a class="nav-link" href="#item-2">Item2</a>
+          <a class="nav-link" href="#item-3">Item3</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link ml-3 my-1" href="#item-3-1">Item 3-1</a>
+            <a class="nav-link ml-3 my-1" href="#item-3-2">Item 3-2</a>
+          </nav>
+        </nav>
   </nav>
   <div data-spy="scroll" data-target="#sparkitectureNav" data-offset="0"  style="position: relative;">
 
