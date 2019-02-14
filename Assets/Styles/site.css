@@ -60,10 +60,10 @@
 }
 
 .parentLink{
-    display: inline-block !important;
+    display: flex !important;
 }
 
-a {
+/* a {
     position: relative;
   }
   a:after {
@@ -80,4 +80,4 @@ a {
     border-bottom: 0;
     margin-top: 5px;
     margin-left: 5px;
-  }
+  } */
