@@ -4,9 +4,9 @@
 
 ### Create a new app
 
-![New App](../Images/newapp.png "New App")
+![New App](../Assets/Images/newapp.png "New App")
 
-- Company Name - Specify the company name or developer name to display on the App Store for your apps. The company name cannot be changed later. [Learn more](https://itunesconnect.apple.com/itc/images/company-name-itunes-image.png)
+- Company Name - Specify the company name or developer name to display on the App Store for your apps. The company name cannot be changed later. [Learn more](https://itunesconnect.apple.com/itc/Assets/Images/company-name-itunes-image.png)
 - Name - The name of your app as it will appear on the App Store. This can't be longer than 30 characters.
 - Subtitle - A summary of your app that will appear under your app’s name on the App Store for customers with devices running iOS 11 or later.
 - SKU - A unique ID for your app that is not visible on the App Store.
@@ -22,7 +22,7 @@
 
 ### Set Rating (App Store)
 
-![Edit Rating](../Images/editrating.png "Edit Rating")
+![Edit Rating](../Assets/Images/editrating.png "Edit Rating")
 
 ### Set Category (App Store)
 
@@ -30,7 +30,7 @@ View category definitions [here](https://itunesconnect.apple.com/itc/static/cate
 
 You may select 2 categories
 
-![Set Category](../Images/categories.png "Set Category")
+![Set Category](../Assets/Images/categories.png "Set Category")
 
 ## Play Store
 
@@ -38,15 +38,15 @@ You can access the google play store [here](https://play.google.com/apps/publish
 
 ### Set Rating (Play Store)
 
-![Set Category](../Images/playstorerating.png "Set Category")
+![Set Category](../Assets/Images/playstorerating.png "Set Category")
 
 ### Set Category (Play Store)
 
-![Play Store Categories Pt 1](../Images/playstorecats1.png "Play Store Categories Pt 1")
-![Play Store Categories Pt 2](../Images/playstorecats2.png "Play Store Categories Pt 2")
-![Play Store Categories Pt 3](../Images/playstorecats3.png "Play Store Categories Pt 3")
-![Play Store Categories Pt 4](../Images/playstorecats4.png "Play Store Categories Pt 4")
+![Play Store Categories Pt 1](../Assets/Images/playstorecats1.png "Play Store Categories Pt 1")
+![Play Store Categories Pt 2](../Assets/Images/playstorecats2.png "Play Store Categories Pt 2")
+![Play Store Categories Pt 3](../Assets/Images/playstorecats3.png "Play Store Categories Pt 3")
+![Play Store Categories Pt 4](../Assets/Images/playstorecats4.png "Play Store Categories Pt 4")
 
 ### Additional Questions
 
-![Additional Questions](../Images/additionalquestions.png "Additional Questions")
+![Additional Questions](../Assets/Images/additionalquestions.png "Additional Questions")
