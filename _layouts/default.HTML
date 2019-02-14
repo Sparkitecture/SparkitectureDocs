@@ -24,7 +24,7 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#sparkitectureNav" data-offset="0"  style="position: relative;">
   
       {% if site.logo %}
       <div class="logoWrapper" >
@@ -80,8 +80,7 @@
           <a class="nav-link" href="{{ "#angular-cli-cheat-sheet" | absolute_url }}">Angular CLI Cheat Sheet</a>      
         </nav>
   </nav>
-  <div data-spy="scroll" data-target="#sparkitectureNav" data-offset="0"  style="position: relative;">
-
+  
  {{% if site. %}}
     <div class="container-lg px-3 my-5 markdown-body">
       <!-- {% if site.title and site.title != page.title %} -->
@@ -93,11 +92,10 @@
       <!-- <button onclick="topFunction()" id="btnTop" title="Go to top">Top</button> -->
       {% if site.github.private != true %}
       <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
-          <a href="{% github_edit_link %}" ><img class="githubBottom" src="{{site.octocat | relative_url}}" /></a>
+          <a href="{% github_edit_link %}" ><img class="githubBottom" src="./Assets/Images/OctocatHelp-sm.jpg" /></a>
       </div>
       {% endif %}
     </div>
-  </div>
 
   <!-- <script>
     window.onscroll = function () { scrollFunction() };
