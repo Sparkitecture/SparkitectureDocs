@@ -28,9 +28,12 @@
     top: 0;
 } 
 
-.logo{
-    margin: 0 auto;
-}
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 
 .logoWrapper{
     width: 100%;
