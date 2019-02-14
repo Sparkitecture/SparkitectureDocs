@@ -19,6 +19,13 @@
   background-color: rgb(0, 56, 48);
 }
 
+#sparkitectureNav{
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 5%;
+}
+
 
 .githubBottom {    
     position: fixed;
