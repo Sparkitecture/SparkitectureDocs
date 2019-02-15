@@ -45,6 +45,7 @@
           <nav class="nav nav-pills flex-column">
             <a class="nav-link lvl-3 my-1" href="{{ "#installing-nodejs-and-npm" | absolute_url }}">Installing Node.js and npm<link class="nav-link indicator" href="#installing-nodejs-and-npm"></a>
             <a class="nav-link lvl-3 my-1" href="{{ "#installing-the-angular-cli" | absolute_url }}">Installing the Angular CLI<link class="nav-link indicator" href="#installing-the-angular-cli"></a>
+            <nav></nav>
           </nav>
         </nav>
         <a class="nav-link ml-1 my-1" href="{{ "#setting-up-sparkitecture" | absolute_url }}">Setting Up Sparkitecture<link class="nav-link indicator" href="#setting-up-sparkitecture"></a>
@@ -155,11 +156,11 @@
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 
-    $('nav.nav-pills a').click(function (e) {
-      $(this).addClass('active')
-      $(this).parent('a').addClass('active')
-      $(this).children('link').addClass('active')
-    });
+    // $('nav.nav-pills a').click(function (e) {
+    //   $(this).addClass('active')
+    //   $(this).parent('a').addClass('active')
+    //   $(this).children('link').addClass('active')
+    // });
   </script>
 </body>
 
