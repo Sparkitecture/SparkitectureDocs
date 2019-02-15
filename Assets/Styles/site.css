@@ -67,6 +67,19 @@
     padding: 5px !important;
 }
 
+.lvl-1{
+    margin-left: 5px;
+}
+.lvl-2{
+    margin-left: 10px;
+}
+.lvl-3{
+    margin-left: 15px;
+}
+.lvl-4{
+    margin-left: 20px;
+}
+
 @media (min-width: 0px) and (max-width: 1800px) { 
     
     #sparkitectureNav{
