@@ -49,6 +49,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    width: 12%;
 }
 
 .nav-link{
@@ -60,7 +61,7 @@
     vertical-align: top;
 }
 
-@media (min-width: 0px) and (max-width: 1200px) { 
+@media (min-width: 0px) and (max-width: 1800) { 
     
     #sparkitectureNav{
         display: none;
