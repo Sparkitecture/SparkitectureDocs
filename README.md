@@ -16,9 +16,9 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installing Prerequisites](#installing-prerequisites)
-    - [Installing Node.js and npm](#installing-nodejs-and-npm)
-    - [Installing the Angular CLI](#installing-the-angular-cli)
+    - [Installing Prerequisites](#installing-prerequisites)
+      - [Installing Node.js and npm](#installing-nodejs-and-npm)
+      - [Installing the Angular CLI](#installing-the-angular-cli)
   - [Setting Up Sparkitecture](#setting-up-sparkitecture)
     - [Getting the files and connecting to source control](#getting-the-files-and-connecting-to-source-control)
     - [Setting up the Server solution (Web Project)](#setting-up-the-server-solution-web-project)
@@ -52,11 +52,11 @@ What things you need to install the software and how to install them
 - [Node.js & npm](https://nodejs.org/en/)
 - [Angular CLI](google.com)
 
-### Installing Prerequisites
+#### Installing Prerequisites
 
 The following series of examples will guide you in getting Sparkitecture working in your development enviorment for the first time.
 
-#### Installing Node.js and npm
+##### Installing Node.js and npm
 
 - Navigate to the [Node](https://nodejs.org/en/) site
 - Download and install the latest stable version (this installs npm as well)
@@ -68,7 +68,7 @@ node -v
 npm -v
 ```
 
-#### Installing the Angular CLI
+##### Installing the Angular CLI
 
 To install the Angular CLI run the following command in your terminal window.
 
