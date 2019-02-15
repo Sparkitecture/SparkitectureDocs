@@ -36,7 +36,7 @@
 
   <nav id="sparkitectureNav" class="navbar navbar-light">
     <nav class="nav nav-pills flex-column">
-      <a class="navbar-brand" href="{{ "#" | absolute_url }}">Sparkitecture</a>
+      <a class="navbar-brand" href="{{ "#" | absolute_url }}">Sparkitecture Docs</a>
       <a class="nav-link" href="{{ "#getting-started" | absolute_url }}">Getting Started
         <link class="nav-link indicator" href="#getting-started"></a>
       <nav class="nav nav-pills flex-column">
@@ -147,7 +147,7 @@
       var hrefURL = $(this).attr('href');
 
       if (hrefURL.startsWith("/Docs")) {
-        if (pathname.startsWith("/SparkitectureDocs/Docs/")) {
+        if (pathname.startsWith("https://sparkitecture.github.io/SparkitectureDocs/Docs/")) {
           if (this.hash !== "") {
 
             // Prevent default anchor click behavior
