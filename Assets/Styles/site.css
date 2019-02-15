@@ -61,7 +61,7 @@
     vertical-align: top;
 }
 
-@media (min-width: 0px) and (max-width: 1800) { 
+@media (min-width: 0px) and (max-width: 1800px) { 
     
     #sparkitectureNav{
         display: none;
