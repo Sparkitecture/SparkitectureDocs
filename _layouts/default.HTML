@@ -144,8 +144,9 @@
 
       // Make sure this.hash has a value before overriding default behavior
       var pathname = window.location.pathname;
+      var hrefURL = $(this).attr('href');
 
-      if ($(this).attr('href').startsWith("/Docs")) {
+      if (hrefURL.startsWith("/Docs")) {
         if (pathname.startsWith("/SparkitectureDocs/Docs/")) {
           if (this.hash !== "") {
 
