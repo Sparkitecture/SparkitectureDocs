@@ -164,6 +164,12 @@
     //   $(this).parent('a').addClass('active')
     //   $(this).children('link').addClass('active')
     // });
+
+
+
+    $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
+       $(this).children('a').addClass('active');
+})
   </script>
 </body>
 
