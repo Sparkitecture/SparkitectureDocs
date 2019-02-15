@@ -57,7 +57,8 @@
 }
 
 .nav-link{
-    padding: 0 !important;
+    display: table;
+    padding: 5px !important;
 }
 
 .indicator{
