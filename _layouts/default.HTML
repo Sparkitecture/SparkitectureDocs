@@ -24,7 +24,7 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body data-spy="scroll" data-target="#sparkitectureNav" data-offset="0" style="position: relative;">
+<body id="sparkitecture" data-spy="scroll" data-target="#sparkitectureNav"  style="position: relative;">
 
   {% if site.logo %}
   <div class="logoWrapper">
@@ -112,7 +112,7 @@
   </nav>
 
   {{% if site. %}}
-  <div id="sparkitecture" class="container-lg px-3 my-5 markdown-body">
+  <div class="container-lg px-3 my-5 markdown-body">
 
     {{ content }}
 
