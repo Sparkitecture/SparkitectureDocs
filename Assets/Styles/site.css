@@ -74,4 +74,8 @@
     #btnTop{
         display: block;
     }
+
+    .logo {
+        width: 65%;
+      }
  }
