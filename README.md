@@ -205,12 +205,6 @@ This builds and serves your app, rebuilding on file changes
 - Import and add a Declaration to Web\ClientApp\src\app\app.module.ts
 - Import and add routing functionality to Web\ClientApp\src\app\app-routing.module.ts
 
-<!-- ## Deployment
-
-``` comment
-placeholder
-``` -->
-
 ## Built With
 
 - [Angular](https://angular.io/) - The web framework used
@@ -219,12 +213,6 @@ placeholder
 - [Node.js](https://nodejs.org/en/) - JavaScript runtime
 - [Bootstrap](https://getbootstrap.com/) - Responsive layouts and styling
 - [Ngx-Formly](https://github.com/ngx-formly/ngx-formly#readme) - Dynamic JSON powered form library for Angular
-
-<!-- ## Versioning
-
-``` comment
-placeholder
-``` -->
 
 ## Contributors
 
@@ -235,12 +223,6 @@ placeholder
 - **Claudia Meredith** - *(placeholder)* - [Sparkhound](http://www.sparkhound.com/)
 - **David Silver** - *(placeholder)* - [Sparkhound](http://www.sparkhound.com/)
 - **Sam North** - *(placeholder)* - [Sparkhound](http://www.sparkhound.com/)
-
-<!-- ## License
-
-``` comment
-placeholder
-``` -->
 
 ## Angular CLI Cheat Sheet
 
