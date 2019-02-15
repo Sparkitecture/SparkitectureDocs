@@ -56,6 +56,6 @@
 }
 
 .indicator{
-    display: inline-block;
+    display: table;
     vertical-align: top;
 }
