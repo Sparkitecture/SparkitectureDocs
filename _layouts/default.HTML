@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="{{ "/Assets/Styles/site.css?v=" | append: site.github.build_revision | relative_url }}">
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -24,7 +24,7 @@
     crossorigin="anonymous"></script>
 </head>
 
-<body id="sparkitecture" data-spy="scroll" data-target="#sparkitectureNav" data-offset="10" style="position: relative;">
+<body id="sparkitecture"  style="position: relative;">
 
   {% if site.logo %}
   <div class="logoWrapper">
@@ -137,6 +137,9 @@
   {% endif %} -->
 
   <script>
+  // Add scrollspy to <body>
+$('body').scrollspy({target: ".navbar", offset: 10});
+
 // Add smooth scrolling on all links inside the navbar
 $("#sparkitectureNav a").on('click', function(event) {
 
