@@ -59,3 +59,11 @@
     display: table;
     vertical-align: top;
 }
+
+@media (min-width: 0px) and (max-width: 991.98px) { 
+    
+    #sparkitectureNav{
+        display: none;
+    } 
+    
+ }
