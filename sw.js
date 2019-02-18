@@ -1,4 +1,4 @@
-/** An empty service worker! */
+
 self.addEventListener('fetch', function (event) {
   if (event.request.url == 'https://sparkitecture.github.io/SparkitectureDocs/Docs/mobile') {
     console.info('responding to sparitecture fetch with Service Worker! 🤓');
@@ -32,7 +32,7 @@ self.addEventListener('install', function (e) {
         'Assets/Images/icon-192.png',
         'Assets/Images/navbar-logo.png',
         'Assets/Images/newapp.png',
-        'Assets/Images/OctocatHelp-sm.png',
+        'Assets/Images/OctocatHelp-sm.jpg',
         'Assets/Images/playstorecats1.png',
         'Assets/Images/playstorecats2.png',
         'Assets/Images/playstorecats3.png',
