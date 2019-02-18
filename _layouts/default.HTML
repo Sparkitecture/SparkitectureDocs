@@ -193,21 +193,15 @@
       }
     }
     function topFunction() {
+
+      if (hrefURL.startsWith("https://sparkitecture.github.io/SparkitectureDocs/Docs/")) {
+        window.location.href = '../';
+      }else{
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
     }
-
-    // $('nav.nav-pills a').click(function (e) {
-    //   $(this).addClass('active')
-    //   $(this).parent('a').addClass('active')
-    //   $(this).children('link').addClass('active')
-    // });
-
-
-
-//     $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
-//        $(this).children('a').addClass('active');
-// })
+  
   </script>
 </body>
 
