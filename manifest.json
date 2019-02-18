@@ -8,7 +8,7 @@
     "background_color": "white",
     "description": "This app provides documentation on using Sparkitecture",
     "scope": "/SparkitectureDocs/",
-    "start_url": "/SparkitectureDocs/Readme.md",
+    "start_url": "/",
     "icons": [
           {
             "src": "Assets/Images/icon-36.png",
