@@ -4,7 +4,7 @@
     "lang": "en-US",
     "short_name": "Sparkitecture",
     "display": "fullscreen",
-    "theme_color": "white",
+    "theme_color": "#81be41",
     "background_color": "white",
     "description": "This app provides documentation on using Sparkitecture",
     "start_url": "/SparkitectureDocs/",
