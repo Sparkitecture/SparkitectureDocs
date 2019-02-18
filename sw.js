@@ -18,7 +18,7 @@ self.addEventListener('install', function (e) {
         '/README.md',
         '/Docs/mobile.md',
         '/manifest.json',
-        '/_layouts/default.HTML',
+        '/_layouts/default.html',
         '/_config.yml',
         '/styles.css',
         '/Assets/Scripts/swRegister.js',
