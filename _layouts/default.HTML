@@ -192,9 +192,9 @@
         }
       }
     }
-    function topFunction() {
-
-      if (hrefURL.startsWith("https://sparkitecture.github.io/SparkitectureDocs/Docs/")) {
+    function topFunction() {      
+      var pathname = window.location.pathname;
+      if (pathname.startsWith("/SparkitectureDocs/Docs/")) {
         window.location.href = '../';
       }else{
       document.body.scrollTop = 0; // For Safari
