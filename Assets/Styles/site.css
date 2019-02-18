@@ -65,12 +65,6 @@
     padding: 0px 25px 0px 5px !important;
 }
 
-.indicator{
-    display: table;
-    vertical-align: top;
-    padding: 5px !important;
-}
-
 .active a {
     color: white !important;
 }
