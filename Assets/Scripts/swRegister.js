@@ -39,14 +39,14 @@ self.addEventListener('install', function (e) {
 });
 
 self.addEventListener('fetch', function (event) {
-    if (event.request.url == 'https://sparkitecture.github.io/SparkitectureDocs/Docs/') {
-        console.info('responding to sw fetch with Service Worker! 🤓');
-        event.respondWith(fetch(event.request).catch(function (e) {
-            let out = { test: 'test' };
-            return new Response(JSON.stringify(out));
-        }));
-        return;
-    }
+    // if (event.request.url == 'https://sparkitecture.github.io/SparkitectureDocs/Docs/') {
+    //     console.info('responding to sw fetch with Service Worker! 🤓');
+    //     event.respondWith(fetch(event.request).catch(function (e) {
+    //         let out = { test: 'test' };
+    //         return new Response(JSON.stringify(out));
+    //     }));
+    //     return;
+    // }
     event.respondWith(
         caches.match(event.request).then(function (response) {
             return response || fetch(event.request);
