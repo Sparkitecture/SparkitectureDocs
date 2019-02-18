@@ -36,7 +36,7 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
   - [Play Store](./Docs/mobile.md#play-store)
     - [Set Rating (Play Store)](./Docs/mobile.md#set-rating-(play-store))
     - [Set Category (Play Store)](./Docs/mobile.md#set-category-(play-store))
-    - [Additional Questions](./Docs/mobile.md#additional-questions)    
+    - [Additional Questions](./Docs/mobile.md#additional-questions)
 - [Built With](#built-with)
 - [Contributors](#contributors)
 - [Angular CLI Cheat Sheet](#angular-cli-cheat-sheet)
