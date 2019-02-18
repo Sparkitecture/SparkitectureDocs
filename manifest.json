@@ -3,11 +3,10 @@
     "dir": "rtl",
     "lang": "en-US",
     "short_name": "Sparkitecture",
-    "display": "minimal-ui",
+    "display": "fullscreen",
     "theme_color": "white",
     "background_color": "white",
     "description": "This app provides documentation on using Sparkitecture",
-    "scope": "/SparkitectureDocs/",
     "start_url": "/SparkitectureDocs/",
     "icons": [
           {
