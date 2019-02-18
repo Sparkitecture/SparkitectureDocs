@@ -62,7 +62,7 @@
 
 .nav-link{
     display: table;
-    padding: 0px !important;
+    padding: 0px 25px 0px 5px !important;
 }
 
 .indicator{

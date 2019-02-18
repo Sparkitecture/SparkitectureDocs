@@ -34,59 +34,100 @@
   {% endif %}
 
   <div class="container">
-  <nav id="sparkitectureNav" class="navbar navbar-light">
-    <nav class="nav nav-pills flex-column">
-      <a class="navbar-brand" href="{{ "#" | absolute_url }}">Sparkitecture Docs</a>
-      <a class="nav-link" href="{{ "#getting-started" | absolute_url }}">Getting Started<link class="nav-link indicator" href="#getting-started"></a>
+    <nav id="sparkitectureNav" class="navbar navbar-light">
       <nav class="nav nav-pills flex-column">
-        <a class="nav-link lvl-1 my-1" href="{{ "#prerequisites" | absolute_url }}">Prerequisites<link class="nav-link indicator" href="#prerequisites"></a>
+        <a class="navbar-brand" href="{{ "#" | absolute_url }}">Sparkitecture Docs</a>
+        <div class="nav-link" href="#getting-started">
+          <a class="nav-link" href="{{ "#getting-started" | absolute_url }}">Getting Started</a></div>
         <nav class="nav nav-pills flex-column">
-        <a class="nav-link lvl-2 my-1" href="{{ "#installing-prerequisites" | absolute_url }}">Installing Prerequisites<link class="nav-link indicator" href="#installing-prerequisites"></a>
+          <div class="nav-link" href="#prerequisites">
+            <a class="nav-link lvl-1 my-1" href="{{ "#prerequisites" | absolute_url }}">Prerequisites</a></div>
           <nav class="nav nav-pills flex-column">
-            <div  href="#installing-nodejs-and-npm" class="nav-link">
-            <a class="nav-link lvl-3 my-1" href="{{ "#installing-nodejs-and-npm" | absolute_url }}">Installing Node.js and npm</a>
-            </div> 
-            <div href="#installing-the-angular-cli"  class="nav-link"> 
-              <a class="nav-link lvl-3 my-1" href="{{ "#installing-the-angular-cli" | absolute_url }}">Installing the Angular CLI</a>
+            <div class="nav-link" href="#installing-prerequisites">
+              <a class="nav-link lvl-2 my-1" href="{{ "#installing-prerequisites" | absolute_url }}">Installing
+                Prerequisites</a></div>
+            <nav class="nav nav-pills flex-column">
+              <div href="#installing-nodejs-and-npm" class="nav-link">
+                <a class="nav-link lvl-3 my-1" href="{{ "#installing-nodejs-and-npm" | absolute_url }}">Installing
+                  Node.js and npm</a>
+              </div>
+              <div href="#installing-the-angular-cli" class="nav-link">
+                <a class="nav-link lvl-3 my-1" href="{{ "#installing-the-angular-cli" | absolute_url }}">Installing the
+                  Angular CLI</a>
+              </div>
+            </nav>
+          </nav>
+          <a class="nav-link lvl-1 my-1" href="{{ "#setting-up-sparkitecture" | absolute_url }}">Setting Up
+            Sparkitecture
+            <link class="nav-link indicator" href="#setting-up-sparkitecture"></a>
+          <nav class="nav nav-pills flex-column">
+            <div class="nav-link" href="#getting-the-files-and-connecting-to-source-control">
+              <a class="nav-link lvl-2 my-1"
+                href="{{ "#getting-the-files-and-connecting-to-source-control" | absolute_url }}">Getting the files and
+                connecting to source control</a></div>
+            <div class="nav-link" href="#setting-up-the-server-solution-web-project">
+              <a class="nav-link lvl-2 my-1"
+                href="{{ "#setting-up-the-server-solution-web-project" | absolute_url }}">Setting up the Server solution
+                (Web Project)</a></div>
+            <div class="nav-link" href="#setting-up-a-local-database">
+              <a class="nav-link lvl-2 my-1" href="{{ "#setting-up-a-local-database" | absolute_url }}">Setting up a
+                local database</a></div>
+            <div class="nav-link" href="#running-the-web-app">
+              <a class="nav-link lvl-2 my-1" href="{{ "#running-the-web-app" | absolute_url }}">Running the web app</a>
             </div>
+            <nav class="nav nav-pills flex-column">
+              <div class="nav-link" href="#running-with-the-angular-cli">
+                <a class="nav-link lvl-3 my-1" href="{{ "#running-with-the-angular-cli" | absolute_url }}">Running with
+                  the Angular CLI</a></div>
+            </nav>
           </nav>
         </nav>
-        <a class="nav-link lvl-1 my-1" href="{{ "#setting-up-sparkitecture" | absolute_url }}">Setting Up Sparkitecture<link class="nav-link indicator" href="#setting-up-sparkitecture"></a>
+        <div class="nav-link" href="#common-operations">
+          <a class="nav-link" href="{{ "#common-operations" | absolute_url }}">Common Operations</a></div>
         <nav class="nav nav-pills flex-column">
-          <a class="nav-link lvl-2 my-1" href="{{ "#getting-the-files-and-connecting-to-source-control" | absolute_url }}">Getting the files and connecting to source control<link class="nav-link indicator" href="#getting-the-files-and-connecting-to-source-control"></a>
-          <a class="nav-link lvl-2 my-1" href="{{ "#setting-up-the-server-solution-web-project" | absolute_url }}">Setting up the Server solution (Web Project)<link class="nav-link indicator" href="#setting-up-the-server-solution-web-project"></a>
-          <a class="nav-link lvl-2 my-1" href="{{ "#setting-up-a-local-database" | absolute_url }}">Setting up a local database<link class="nav-link indicator" href="#setting-up-a-local-database"></a>
-          <a class="nav-link lvl-2 my-1" href="{{ "#running-the-web-app" | absolute_url }}">Running the web app<link class="nav-link indicator" href="#running-the-web-app"></a>
+          <div class="nav-link" href="#create-a-new-component">
+            <a class="nav-link lvl-1 my-1" href="{{ "#create-a-new-component" | absolute_url }}">Create a New
+              Component</a></div>
+          <div class="nav-link" href="#adding-a-search-row">
+            <a class="nav-link lvl-1 my-1" href="{{ "#adding-a-search-row" | absolute_url }}">Adding a Search Row</a>
+          </div>
+        </nav>
+        <div class="nav-link" href="#mobile">
+          <a class="nav-link" href="{{ "/Docs/mobile#mobile" | absolute_url }}">Mobile</a></div>
+        <nav class="nav nav-pills flex-column">
+          <div class="nav-link" href="#app-store">
+            <a class="nav-link lvl-1 my-1" href="{{ "/Docs/mobile#app-store" | absolute_url }}">App Store</a></div>
           <nav class="nav nav-pills flex-column">
-            <a class="nav-link lvl-3 my-1" href="{{ "#running-with-the-angular-cli" | absolute_url }}">Running with the Angular CLI<link class="nav-link indicator" href="#running-with-the-angular-cli"></a>
+            <div class="nav-link" href="#create-a-new-app">
+              <a class="nav-link lvl-2 my-1" href="{{ "/Docs/mobile#create-a-new-app" | absolute_url }}">Create a New
+                App</a></div>
+            <div class="nav-link" href="#set-rating-app-store">
+              <a class="nav-link lvl-2 my-1" href="{{ "/Docs/mobile#set-rating-app-store" | absolute_url }}">Set Rating
+                (App Store)</a></div>
+            <div class="nav-link" href="#set-category-app-store">
+              <a class="nav-link lvl-2 my-1" href="{{ "/Docs/mobile#set-category-app-store" | absolute_url }}">Set
+                Category (App Store)</a></div>
+          </nav>
+          <div class="nav-link" href="#play-store">
+            <a class="nav-link lvl-1 my-1" href="{{ "/Docs/mobile#play-store" | absolute_url }}">Play Store</a></div>
+          <nav class="nav nav-pills flex-column">
+            <div class="nav-link" href="#set-rating-play-store">
+              <a class="nav-link lvl-2 my-1" href="{{ "/Docs/mobile#set-rating-play-store" | absolute_url }}">Set Rating
+                (Play Store)</a></div>
+            <div class="nav-link" href="#set-category-play-store">
+              <a class="nav-link lvl-2 my-1" href="{{ "/Docs/mobile#set-category-play-store" | absolute_url }}">Set
+                Category (Play Store)</a></div>
           </nav>
         </nav>
+        <div class="nav-link" href="#built-with">
+          <a class="nav-link" href="{{ "#built-with" | absolute_url }}">Built With</a></div>
+        <div class="nav-link" href="#contributors">
+          <a class="nav-link" href="{{ "#contributors" | absolute_url }}">Contributors</a></div>
+        <div class="nav-link" href="#angular-cli-cheat-sheet">
+          <a class="nav-link" href="{{ "#angular-cli-cheat-sheet" | absolute_url }}">Angular CLI Cheat Sheet</a></div>
       </nav>
-      <a class="nav-link" href="{{ "#common-operations" | absolute_url }}">Common Operations<link class="nav-link indicator" href="#common-operations"></a>
-      <nav class="nav nav-pills flex-column">
-        <a class="nav-link lvl-1 my-1" href="{{ "#create-a-new-component" | absolute_url }}">Create a New Component<link class="nav-link indicator" href="#create-a-new-component"></a>
-        <a class="nav-link lvl-1 my-1" href="{{ "#adding-a-search-row" | absolute_url }}">Adding a Search Row<link class="nav-link indicator" href="#adding-a-search-row"></a>
-      </nav>
-      <a class="nav-link" href="{{ "/Docs/mobile#mobile" | absolute_url }}">Mobile<link class="nav-link indicator" href="#mobile"></a>
-      <nav class="nav nav-pills flex-column">
-        <a class="nav-link lvl-1 my-1" href="{{ "/Docs/mobile#app-store" | absolute_url }}">App Store<link class="nav-link indicator" href="#app-store"></a>
-        <nav class="nav nav-pills flex-column">
-          <a class="nav-link lvl-2 my-1" href="{{ "/Docs/mobile#create-a-new-app" | absolute_url }}">Create a New App<link class="nav-link indicator" href="#create-a-new-app"></a>
-          <a class="nav-link lvl-2 my-1" href="{{ "/Docs/mobile#set-rating-app-store" | absolute_url }}">Set Rating (App Store)<link class="nav-link indicator" href="#set-rating-app-store"></a>
-          <a class="nav-link lvl-2 my-1" href="{{ "/Docs/mobile#set-category-app-store" | absolute_url }}">Set Category (App Store)<link class="nav-link indicator" href="#set-category-app-store"></a>
-        </nav>
-        <a class="nav-link lvl-1 my-1" href="{{ "/Docs/mobile#play-store" | absolute_url }}">Play Store<link class="nav-link indicator" href="#play-store"></a>
-        <nav class="nav nav-pills flex-column">
-          <a class="nav-link lvl-2 my-1" href="{{ "/Docs/mobile#set-rating-play-store" | absolute_url }}">Set Rating (Play Store)<link class="nav-link indicator" href="#set-rating-play-store"></a>
-          <a class="nav-link lvl-2 my-1" href="{{ "/Docs/mobile#set-category-play-store" | absolute_url }}">Set Category (Play Store)<link class="nav-link indicator" href="#set-category-play-store"></a>
-        </nav>
-      </nav>
-      <a class="nav-link" href="{{ "#built-with" | absolute_url }}">Built With<link class="nav-link indicator" href="#built-with"></a>
-      <a class="nav-link" href="{{ "#contributors" | absolute_url }}">Contributors<link class="nav-link indicator" href="#contributors"></a>
-      <a class="nav-link" href="{{ "#angular-cli-cheat-sheet" | absolute_url }}">Angular CLI Cheat Sheet<link class="nav-link indicator" href="#angular-cli-cheat-sheet"></a>
     </nav>
-  </nav>
-</div>
+  </div>
   {{% if site. %}}
   <div class="container-lg px-3 my-5 markdown-body">
 
@@ -96,7 +137,7 @@
     <a href="{% github_edit_link %}"><img class="githubBottom" src="{{site.octocat | relative_url}}"
         alt="Contribute to Docs"></a>
   </div>
-  
+
 
   <script>
     // Add scrollspy to <body>
@@ -145,13 +186,12 @@
 
     window.onscroll = function () { scrollFunction() };
     function scrollFunction() {
-      if (screen.width <= 1800)
-      {
-      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("btnTop").style.display = "block";
-      } else {
-        document.getElementById("btnTop").style.display = "none";
-      }
+      if (screen.width <= 1800) {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          document.getElementById("btnTop").style.display = "block";
+        } else {
+          document.getElementById("btnTop").style.display = "none";
+        }
       }
     }
     function topFunction() {
