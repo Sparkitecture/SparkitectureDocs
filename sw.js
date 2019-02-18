@@ -18,7 +18,6 @@ self.addEventListener('install', function (e) {
         'README.md',
         'Docs/mobile.md',
         'manifest.json',
-        //'assets/css/styles.css',
         'Assets/Scripts/swRegister.js',
         'Assets/Styles/site.css',
         'Assets/Images/additionalquestions.png',
