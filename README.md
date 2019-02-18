@@ -236,7 +236,7 @@ This builds and serves your app, rebuilding on file changes
 | [generate](https://angular.io/cli/generate) | g | Generates and/or modifies files based on a schematic. |
 | [help](https://angular.io/cli/help) |  | Lists available commands and their short descriptions. |
 | [lint](https://angular.io/cli/lint) | l | Runs linting tools on Angular app code in a given project folder. |
-| [new](https://angular.io/cli/new) | n | Creates a bew workspace and an Angular app |
+| [new](https://angular.io/cli/new) | n | Creates a new workspace and an Angular app |
 | [serve](https://angular.io/cli/serve) | s | Builds and serves your app, rebuilding on file changes. |
 | [run](https://angular.io/cli/run) |  | Runs an Architect target with an optional custom builder configuration defined in your project. |
 | [test](https://angular.io/cli/test) | t | Runs unit tests in a project. |
