@@ -14,7 +14,6 @@ self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open('sparkitecture-cache').then(function (cache) {
       return cache.addAll([
-        '/',
         '/index.html',
         '/README.md',
         '/Docs/mobile.md',
