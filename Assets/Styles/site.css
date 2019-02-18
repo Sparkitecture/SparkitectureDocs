@@ -28,8 +28,7 @@
     background-color: white;    
     top: 60px;
     left: 5px;       
-    z-index: 9;    
-    top: 0;
+    z-index: 9; 
 } 
 
 #sparkitectureNav div{
@@ -70,6 +69,10 @@
     display: table;
     vertical-align: top;
     padding: 5px !important;
+}
+
+.active a {
+    color: white !important;
 }
 
 .lvl-1{
