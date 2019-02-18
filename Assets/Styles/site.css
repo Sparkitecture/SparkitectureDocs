@@ -26,14 +26,14 @@
  #sparkitectureNav{
     position: fixed;
     background-color: white;    
-    top: 60px;
+    top: 50px;
     left: 5px;       
     z-index: 9; 
 } 
 
 #sparkitectureNav div{
     color: white;
- padding-left: 1%;
+    padding-left: 1%;
 }
 
 .logo {
