@@ -30,6 +30,11 @@
             "type": "image/png"
           },
           {
+            "src": "Assets/Images/icon-splash.png",
+            "sizes": "128x128",
+            "type": "image/png"
+          },
+          {
             "src": "Assets/Images/icon-144.png",
             "sizes": "144x144",
             "type": "image/png"
