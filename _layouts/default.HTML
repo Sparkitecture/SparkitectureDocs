@@ -37,7 +37,7 @@
 
 </head>
 
-<body id="sparkitecture" style="position: relative;">
+<body id="sparkitecture" class="light" style="position: relative;">
 
   {% if site.logo %}
   <div class="logoWrapper">
@@ -48,7 +48,7 @@
   {% endif %}
 
   <div class="container">
-    <nav id="sparkitectureNav" class="navbar navbar-light">
+    <nav id="sparkitectureNav" class="navbar navbar-light light">
       <div class="custom-control custom-switch">
         <input type="checkbox" class="custom-control-input" id="themeSwitch">
         <label class="custom-control-label" for="themeSwitch">Change Theme</label>
@@ -248,13 +248,27 @@
     $('#themeSwitch').change(function () {
       if (this.checked) {
         if ($('#sparkitectureNav').hasClass('navbar-light')) {
+
           $('#sparkitectureNav').addClass('navbar-dark');
-        $('#sparkitectureNav').removeClass('navbar-light');
+          $('#sparkitectureNav').removeClass('navbar-light');
+
+          $('#sparkitectureNav').addClass('dark');
+          $('#sparkitectureNav').removeClass('light');
+
+          $('body').addClass('dark');
+          $('body').removeClass('light');
         }
       } else {
         if ($('#sparkitectureNav').hasClass('navbar-dark')) {
+
           $('#sparkitectureNav').addClass('navbar-light');
-        $('#sparkitectureNav').removeClass('navbar-dark');
+          $('#sparkitectureNav').removeClass('navbar-dark');
+
+          $('#sparkitectureNav').addClass('light');
+          $('#sparkitectureNav').removeClass('dark');
+
+          $('body').addClass('light');
+          $('body').removeClass('dark');
         }
       }
     });

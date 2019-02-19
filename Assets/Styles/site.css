@@ -36,6 +36,16 @@
     padding-left: 1%;
 }
 
+.light {
+    background-color: white;
+    color: black;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
 .logo {
     display: block;
     margin-left: auto;
