@@ -47,13 +47,13 @@
   </div>
   {% endif %}
 
-  <div class="custom-control custom-switch themeSwitch">
+  <!-- <div class="custom-control custom-switch themeSwitch">
     <input type="checkbox" class="custom-control-input" id="themeSwitch">
     <label class="custom-control-label" for="themeSwitch">Change Theme</label>
-  </div>
+  </div> -->
 
   <div class="container">
-    <nav id="sparkitectureNav" class="navbar navbar-light light">
+    <nav id="sparkitectureNav" class="navbar navbar-light">
 
       <nav class="nav nav-pills flex-column">
         <a class="navbar-brand" href="{{ "#" | absolute_url }}">Sparkitecture Docs</a>
@@ -222,76 +222,51 @@
       }
     }
 
-    $('#themeSwitch').on("change", function (event) {
-      if ($('#theme').hasClass('light')) {
-        $('#theme').removeClass('light');
-        $('#theme').addClass('dark');
-        $('#theme').css({
-          "color": $('#theme').data("styleswitch-color"),
-          "background-color": $('#theme').data("styleswitch-bgcolor")
-        });
-        $('.linkline').css({
-          "-webkit-text-fill-color": $('.linkline').data("styleswitch-fillcolor")
-        });
-      } else {
-        $('#theme').addClass('light');
-        $('#theme').removeClass('dark');
-        $('#theme').css({
-          "color": "#333",
-          "background-color": "#fff"
-        });
-        $('.linkline').css({
-          "-webkit-text-fill-color": "#fff"
-        });
-      }
-      event.preventDefault();
-    });
+    // $('#themeSwitch').change(function () {
+    //   if (this.checked) {
+    //     if ($('#sparkitectureNav').hasClass('navbar-light')) {
 
-    $('#themeSwitch').change(function () {
-      if (this.checked) {
-        if ($('#sparkitectureNav').hasClass('navbar-light')) {
+    //       $('#sparkitectureNav').addClass('navbar-dark');
+    //       $('#sparkitectureNav').removeClass('navbar-light');
 
-          $('#sparkitectureNav').addClass('navbar-dark');
-          $('#sparkitectureNav').removeClass('navbar-light');
+    //       $('#sparkitectureNav').addClass('dark');
+    //       $('#sparkitectureNav').removeClass('light');
 
-          $('#sparkitectureNav').addClass('dark');
-          $('#sparkitectureNav').removeClass('light');
+    //       $('body').addClass('dark');
+    //       $('body').removeClass('light');
 
-          $('body').addClass('dark');
-          $('body').removeClass('light');
+    //       $('table').addClass('dark');
+    //       $('table').removeClass('light');
 
-          $('table').addClass('dark');
-          $('table').removeClass('light');
+    //       $('tr').addClass('dark');
+    //       $('tr').removeClass('light');
 
-          $('tr').addClass('dark');
-          $('tr').removeClass('light');
+    //       $('td').addClass('dark');
+    //       $('td').removeClass('light');
+    //     }
+    //   } else {
+    //     if ($('#sparkitectureNav').hasClass('navbar-dark')) {
 
-          $('td').addClass('dark');
-          $('td').removeClass('light');
-        }
-      } else {
-        if ($('#sparkitectureNav').hasClass('navbar-dark')) {
+    //       $('#sparkitectureNav').addClass('navbar-light');
+    //       $('#sparkitectureNav').removeClass('navbar-dark');
 
-          $('#sparkitectureNav').addClass('navbar-light');
-          $('#sparkitectureNav').removeClass('navbar-dark');
+    //       $('#sparkitectureNav').addClass('light');
+    //       $('#sparkitectureNav').removeClass('dark');
 
-          $('#sparkitectureNav').addClass('light');
-          $('#sparkitectureNav').removeClass('dark');
+    //       $('body').addClass('light');
+    //       $('body').removeClass('dark');
 
-          $('body').addClass('light');
-          $('body').removeClass('dark');
+    //       $('table').addClass('light');
+    //       $('table').removeClass('dark');
 
-          $('table').addClass('light');
-          $('table').removeClass('dark');
+    //       $('tr').addClass('light');
+    //       $('tr').removeClass('dark');
 
-          $('tr').addClass('light');
-          $('tr').removeClass('dark');
-
-          $('td').addClass('light');
-          $('td').removeClass('dark');
-        }
-      }
-    });
+    //       $('td').addClass('light');
+    //       $('td').removeClass('dark');
+    //     }
+    //   }
+    // });
 
   </script>
 </body>

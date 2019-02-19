@@ -107,7 +107,7 @@ span {
       }
  }
 
- .themeSwitch {
+ /* .themeSwitch {
     position: absolute;
     top: 10px;
     left: 5px;
@@ -167,4 +167,4 @@ span {
 .dark .active a{
     background-color: rgb(129, 190, 65) !important;
     color: black !important;
-}
+} */
