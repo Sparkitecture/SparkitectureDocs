@@ -145,7 +145,7 @@
 
     {{ content }}
 
-    <button onclick="topFunction()" id="btnTop" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="btnTop" title="Go to top" aria-valuetext="Top" >Top</button>
     <a href="{% github_edit_link %}"><img class="githubBottom" src="{{site.octocat | relative_url}}"
         alt="Contribute to Docs"></a>
   </div>
@@ -153,7 +153,7 @@
 
   <script>
     // Add scrollspy to <body>
-    $('body').scrollspy({ target: "#sparkitectureNav", offset: 140 });
+    $('body').scrollspy({ target: "#sparkitectureNav", offset: 60 });
 
     // Add smooth scrolling on all links inside the navbar
     $("#sparkitectureNav a").on('click', function (event) {
