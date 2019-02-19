@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ "/Assets/Styles/site.css?v=" | append: site.github.build_revision | relative_url }}">
-  <link rel="manifest" href="{{ "/manifest.json" | relative_url }}"  />
+  <link rel="manifest" href="{{ "/manifest.json" | relative_url }}" />
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -22,7 +22,13 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="{{ "/Assets/Scripts/swRegister.js" | relative_url }}" ></script>
+  <script src="{{ "/Assets/Scripts/swRegister.js" | relative_url }}"></script>
+
+  <script>
+    navigator.serviceWorker && navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function (registration) {
+      console.log('service worker, registered with scope: ', registration.scope);
+    });
+  </script>
 
 </head>
 
@@ -61,14 +67,15 @@
             </nav>
           </nav>
           <div class="nav-link lvl-1 my-1" href="#setting-up-sparkitecture">
-          <a href="{{ "#setting-up-sparkitecture" | absolute_url }}">Setting Up
-            Sparkitecture</a></div>
+            <a href="{{ "#setting-up-sparkitecture" | absolute_url }}">Setting Up
+              Sparkitecture</a></div>
           <nav class="nav nav-pills flex-column">
             <div class="nav-link lvl-2 my-1" href="#getting-the-files-and-connecting-to-source-control">
               <a href="{{ "#getting-the-files-and-connecting-to-source-control" | absolute_url }}">Getting the files and
                 connecting to source control</a></div>
             <div class="nav-link lvl-2 my-1" href="#setting-up-the-server-solution-web-project">
-              <a href="{{ "#setting-up-the-server-solution-web-project" | absolute_url }}">Setting up the Server solution
+              <a href="{{ "#setting-up-the-server-solution-web-project" | absolute_url }}">Setting up the Server
+                solution
                 (Web Project)</a></div>
             <div class="nav-link lvl-2 my-1" href="#setting-up-a-local-database">
               <a href="{{ "#setting-up-a-local-database" | absolute_url }}">Setting up a
@@ -195,16 +202,16 @@
         }
       }
     }
-    function topFunction() {      
+    function topFunction() {
       var pathname = window.location.pathname;
       if (pathname.startsWith("/SparkitectureDocs/Docs/")) {
         window.location.href = '../';
-      }else{
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      } else {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
     }
-  
+
   </script>
 </body>
 
