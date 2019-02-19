@@ -1,13 +1,7 @@
 
 self.addEventListener('fetch', function (event) {
-  if (event.request.url == 'https://sparkitecture.github.io/SparkitectureDocs/Docs/mobile') {
-    console.info('responding to sparitecture fetch with Service Worker! 🤓');
-    event.respondWith(fetch(event.request).catch(function(e) {
-     // let out = { Gold: 1, Size: -1, Actions: [] };
-      return;// new Response(JSON.stringify(out));
-    }));
-    return;
-  }
+ 
+    return;  
 });
 
 self.addEventListener('install', function (e) {
