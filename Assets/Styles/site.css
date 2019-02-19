@@ -36,12 +36,12 @@
     padding-left: 1%;
 }
 
-.light {
+.light *{
     background-color: white;
     color: black;
 }
 
-.dark {
+.dark *{
     background-color: black;
     color: white;
 }
