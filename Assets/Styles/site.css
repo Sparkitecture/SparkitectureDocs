@@ -46,12 +46,12 @@
     color: white !important;
 }
 
-.light body{
+.light #sparkitecture{
     background-color: white !important;
     color: black !important;
 }
 
-.dark body{
+.dark #sparkitecture{
     background-color: black !important;
     color: white !important;
 }
