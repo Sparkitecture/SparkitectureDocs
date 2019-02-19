@@ -254,23 +254,15 @@
           $('#sparkitectureNav').addClass('navbar-dark');
           $('#sparkitectureNav').removeClass('navbar-light');
 
-          $('#sparkitectureNav').addClass('dark');
-          $('#sparkitectureNav').removeClass('light');
-
-          $('body').addClass('dark');
-          $('body').removeClass('light');
+          $(this).find('*').addClass('dark').removeClass('light');
         }
       } else {
         if ($('#sparkitectureNav').hasClass('navbar-dark')) {
 
           $('#sparkitectureNav').addClass('navbar-light');
           $('#sparkitectureNav').removeClass('navbar-dark');
-
-          $('#sparkitectureNav').addClass('light');
-          $('#sparkitectureNav').removeClass('dark');
-
-          $('body').addClass('light');
-          $('body').removeClass('dark');
+          
+          $(this).find('*').addClass('light').removeClass('dark');
         }
       }
     });
