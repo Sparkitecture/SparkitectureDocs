@@ -49,6 +49,10 @@
 
   <div class="container">
     <nav id="sparkitectureNav" class="navbar navbar-light">
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="themeSwitch">
+        <label class="custom-control-label" for="themeSwitch">Change Theme</label>
+      </div>
       <nav class="nav nav-pills flex-column">
         <a class="navbar-brand" href="{{ "#" | absolute_url }}">Sparkitecture Docs</a>
         <div class="nav-link my-1" href="#getting-started">
@@ -141,12 +145,11 @@
       </nav>
     </nav>
   </div>
-  {{% if site. %}}
-  <div class="container-lg px-3 my-5 markdown-body">
 
+  <div class="container-lg px-3 my-5 markdown-body">
     {{ content }}
 
-    <button onclick="topFunction()" id="btnTop" title="Go to top" >Top</button>
+    <button onclick="topFunction()" id="btnTop" title="Go to top">Top</button>
     <a href="{% github_edit_link %}"><img class="githubBottom" src="{{site.octocat | relative_url}}"
         alt="Contribute to Docs"></a>
   </div>
@@ -216,6 +219,45 @@
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
     }
+
+    $('#themeSwitch').on("change", function (event) {
+      if ($('#theme').hasClass('light')) {
+        $('#theme').removeClass('light');
+        $('#theme').addClass('dark');
+        $('#theme').css({
+          "color": $('#theme').data("styleswitch-color"),
+          "background-color": $('#theme').data("styleswitch-bgcolor")
+        });
+        $('.linkline').css({
+          "-webkit-text-fill-color": $('.linkline').data("styleswitch-fillcolor")
+        });
+      } else {
+        $('#theme').addClass('light');
+        $('#theme').removeClass('dark');
+        $('#theme').css({
+          "color": "#333",
+          "background-color": "#fff"
+        });
+        $('.linkline').css({
+          "-webkit-text-fill-color": "#fff"
+        });
+      }
+      event.preventDefault();
+    });
+
+    $('#themeSwitch').change(function () {
+      if (this.checked) {
+        if ($('#sparkitectureNav').hasClass('navbar-light')) {
+          $('#sparkitectureNav').addClass('navbar-dark');
+        $('#sparkitectureNav').removeClass('navbar-light');
+        }
+      } else {
+        if ($('#sparkitectureNav').hasClass('navbar-dark')) {
+          $('#sparkitectureNav').addClass('navbar-light');
+        $('#sparkitectureNav').removeClass('navbar-dark');
+        }
+      }
+    });
 
   </script>
 </body>
