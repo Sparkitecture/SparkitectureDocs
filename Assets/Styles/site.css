@@ -69,6 +69,10 @@
     color: white !important;
 }
 
+a {
+    color: blue;
+}
+
 .lvl-1{
     margin-left: 15px;
 }
