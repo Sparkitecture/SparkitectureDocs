@@ -56,6 +56,16 @@
     color: rgb(129, 190, 65) !important;
 }
 
+.light .active a{
+    background-color: blue !important;
+    color: white !important;
+}
+
+.dark .active a{
+    background-color: rgb(129, 190, 65) !important;
+    color: black !important;
+}
+
 .logo {
     display: block;
     margin-left: auto;
