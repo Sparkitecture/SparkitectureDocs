@@ -47,12 +47,14 @@
   </div>
   {% endif %}
 
+  <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="themeSwitch">
+    <label class="custom-control-label" for="themeSwitch">Change Theme</label>
+  </div>
+
   <div class="container">
     <nav id="sparkitectureNav" class="navbar navbar-light light">
-      <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="themeSwitch">
-        <label class="custom-control-label" for="themeSwitch">Change Theme</label>
-      </div>
+
       <nav class="nav nav-pills flex-column">
         <a class="navbar-brand" href="{{ "#" | absolute_url }}">Sparkitecture Docs</a>
         <div class="nav-link my-1" href="#getting-started">
