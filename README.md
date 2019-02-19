@@ -240,6 +240,6 @@ This builds and serves your app, rebuilding on file changes
 | [serve](https://angular.io/cli/serve) | s | Builds and serves your app, rebuilding on file changes. |
 | [run](https://angular.io/cli/run) |  | Runs an Architect target with an optional custom builder configuration defined in your project. |
 | [test](https://angular.io/cli/test) | t | Runs unit tests in a project. |
-| [update](https://angular.io/cli/update) |  | Updates your application and its dependencies. See [here](https://update.angular.io/) |
+| [update](https://angular.io/cli/update) |  | Updates your application and its dependencies. See [update](https://update.angular.io/) guide. |
 | [version](https://angular.io/cli/version) | v | Outputs Angular CLI version. |
 | [xi18n](https://angular.io/cli/xi18n) |  | Extracts i18n messages from source code. |
