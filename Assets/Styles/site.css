@@ -46,6 +46,16 @@
     color: white;
 }
 
+.light a{
+    background-color: white;
+    color: blue;
+}
+
+.dark a{
+    background-color: black;
+    color: rgb(129, 190, 65);
+}
+
 .logo {
     display: block;
     margin-left: auto;
