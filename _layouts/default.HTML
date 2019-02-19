@@ -254,7 +254,8 @@
           $('#sparkitectureNav').addClass('navbar-dark');
           $('#sparkitectureNav').removeClass('navbar-light');
 
-          $(this).find('*').addClass('dark').removeClass('light');
+          $(this).find('*').addClass('dark')
+          $(this).find('*').removeClass('light');
         }
       } else {
         if ($('#sparkitectureNav').hasClass('navbar-dark')) {
@@ -262,7 +263,8 @@
           $('#sparkitectureNav').addClass('navbar-light');
           $('#sparkitectureNav').removeClass('navbar-dark');
           
-          $(this).find('*').addClass('light').removeClass('dark');
+          $(this).find('*').addClass('light');
+          $(this).find('*').removeClass('dark');
         }
       }
     });
