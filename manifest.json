@@ -37,13 +37,13 @@
           },
           {
             "src": "/SparkitectureDocs/Assets/Images/logo-192.png",
-            "type": "image/png",
-            "sizes": "192x192"
+            "sizes": "192x192",
+            "type": "image/png"
           },
           {
             "src": "/SparkitectureDocs/Assets/Images/logo-512.png",
-            "type": "image/png",
-            "sizes": "512x512"
+            "sizes": "512x512",
+            "type": "image/png"
           }        
     ]
   }
