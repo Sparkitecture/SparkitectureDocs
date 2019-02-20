@@ -98,11 +98,11 @@ span {
     margin-left: 60px;
 }
 
-@media (min-width: 0px) and (max-width: 1500px) {
+@media (min-width: 0px) and (max-width: 1600px) {
 
-    /* #sparkitectureNav {
+     #sparkitectureNav {
         display: none;
-    } */
+    } 
 
     #btnTop {
         display: block;
