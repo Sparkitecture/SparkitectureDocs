@@ -283,6 +283,14 @@
     //   }
     // });
 
+
+    $('[data-spy="scroll"]').on('activate.bs.scrollspy', function () {
+      if ($(this).hasClass('collapse')) {
+        $(this).removeClass('collapse');
+        $(this).addClass('.collapse.show');
+      }
+})
+
   </script>
 </body>
 
