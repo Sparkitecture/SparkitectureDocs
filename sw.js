@@ -12,6 +12,7 @@ self.addEventListener('install', function (e) {
     caches.open('sparkitecture-cache').then(function (cache) {
       return cache.addAll([
         '/SparkitectureDocs/',
+        '/SparkitectureDocs/#',
         '/SparkitectureDocs/#getting-started',
         '/SparkitectureDocs/#prerequisites',
         '/SparkitectureDocs/#installing-prerequisites',
