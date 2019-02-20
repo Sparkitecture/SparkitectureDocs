@@ -1,6 +1,3 @@
-importScripts('serviceworker-cache-polyfill.js');
-
-
 //version: This comment initiates a cache refresh when change
 self.addEventListener('fetch', function (event) {
   event.respondWith(
