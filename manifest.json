@@ -11,8 +11,7 @@
     "start_url": "/SparkitectureDocs/#",
     "serviceworker": {
       "src": "/SparkitectureDocs/sw.js",
-      "scope": "/SparkitectureDocs/",
-      "update_via_cache": "none"
+      "scope": "/SparkitectureDocs/"
     },
     "icons": [
           {
