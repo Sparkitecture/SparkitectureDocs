@@ -25,7 +25,7 @@
 
 #sparkitectureNav {
     position: fixed;
-    background-color: white;
+    background-color: transparent;
     top: 40px;
     left: 5px;
 }
