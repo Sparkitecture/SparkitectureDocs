@@ -8,7 +8,7 @@
     "background_color": "#81be41",
     "description": "This app provides documentation on using Sparkitecture",
     "scope": "/SparkitectureDocs/",
-    "start_url": "/SparkitectureDocs/#",
+    "start_url": "/SparkitectureDocs/",
     "serviceworker": {
       "src": "/SparkitectureDocs/sw.js",
       "scope": "/SparkitectureDocs/"
