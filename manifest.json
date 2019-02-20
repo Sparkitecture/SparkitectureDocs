@@ -2,13 +2,18 @@
     "name": "Sparkitecture Docs",
     "dir": "rtl",
     "lang": "en-US",
-    "short_name": "Sparkitecture",
+    "short_name": "Sparkitecture Docs",
     "display": "fullscreen",
     "theme_color": "#81be41",
     "background_color": "#81be41",
     "description": "This app provides documentation on using Sparkitecture",
     "scope": "/SparkitectureDocs/",
     "start_url": "/SparkitectureDocs/#",
+    "serviceworker": {
+      "src": "/SparkitectureDocs/sw.js",
+      "scope": "/SparkitectureDocs/",
+      "update_via_cache": "none"
+    },
     "icons": [
           {
             "src": "/SparkitectureDocs/Assets/Images/icon-36.png",
