@@ -95,15 +95,16 @@ span {
 }
 
 @media (min-width: 0px) and (max-width: 1800px) {
-    #sparkitectureNav {
+
+    /* #sparkitectureNav {
         display: none;
-    }
+    } */
+    
     #btnTop {
         display: block;
     }
     .logo {
         width: 65%;
-        margin-bottom: -30px;
         margin-top: 20px;
     }
 }
