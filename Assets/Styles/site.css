@@ -47,6 +47,7 @@
 
 .logoWrapper {
     width: 100%;
+    z-index: 101;
 }
 
 .githubBottom {
