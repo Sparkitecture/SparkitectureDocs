@@ -54,7 +54,7 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-2 col-xl-2 col-md-2 d-none d-sm-none">
+      <div class="d-none col-md-2 col-lg-2 col-xl-2">
         <nav id="sparkitectureNav" class="navbar navbar-light">
 
           <nav class="nav nav-pills flex-column">
@@ -152,11 +152,11 @@
       </div>
 
 
-      <div class="col-md-10 col-lg-10 col-xl-10 col-12 col-sm-12 mx-auto">
+      <div class="col-12 col-md-10 col-lg-10 col-xl-10 mx-auto">
 
         {{ content }}
 
-        <button onclick="topFunction()" id="btnTop" title="Go to top">Top</button>
+        <button onclick="topFunction()" id="btnTop" title="Go to top" class="d-lg-none d-xl-none">Top</button>
         <a href="{% github_edit_link %}"><img class="githubBottom" src="{{site.octocat | relative_url}}"
             alt="Contribute to Docs"></a>
       </div>
