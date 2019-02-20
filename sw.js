@@ -1,7 +1,7 @@
 importScripts('serviceworker-cache-polyfill.js');
 
 
-//version: This comment initiates a cache refresh when changed
+//version: This comment initiates a cache refresh when change
 self.addEventListener('fetch', function (event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
@@ -15,6 +15,30 @@ self.addEventListener('install', function (e) {
     caches.open('sparkitecture-cache').then(function (cache) {
       return cache.addAll([
         '/SparkitectureDocs/',
+        '/SparkitectureDocs/#getting-started',
+        '/SparkitectureDocs/#prerequisites',
+        '/SparkitectureDocs/#installing-prerequisites',
+        '/SparkitectureDocs/#installing-nodejs-and-npm',
+        '/SparkitectureDocs/#installing-the-angular-cli',
+        '/SparkitectureDocs/#setting-up-sparkitecture',
+        '/SparkitectureDocs/#setting-up-the-server-solution-web-project',
+        '/SparkitectureDocs/#setting-up-a-local-database',
+        '/SparkitectureDocs/#running-the-web-app',
+        '/SparkitectureDocs/#running-with-the-angular-cli',
+        '/SparkitectureDocs/#common-operations',
+        '/SparkitectureDocs/#create-a-new-component',
+        '/SparkitectureDocs/#adding-a-search-row',
+        '/SparkitectureDocs/#built-with',
+        '/SparkitectureDocs/#contributors',
+        '/SparkitectureDocs/#angular-cli-cheat-sheet',
+        '/SparkitectureDocs/Docs/mobile#mobile',
+        '/SparkitectureDocs/Docs/mobile#app-store',
+        '/SparkitectureDocs/Docs/mobile#create-a-new-app',
+        '/SparkitectureDocs/Docs/mobile#set-rating-app-store',
+        '/SparkitectureDocs/Docs/mobile#set-category-app-store',
+        '/SparkitectureDocs/Docs/mobile#play-store',
+        '/SparkitectureDocs/Docs/mobile#set-rating-play-store',
+        '/SparkitectureDocs/Docs/mobile#set-category-play-store',
         '/SparkitectureDocs/index.html',
         '/SparkitectureDocs/README.md',
         '/SparkitectureDocs/Docs/mobile.md',
