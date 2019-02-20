@@ -23,15 +23,15 @@
     background-color: rgb(129, 190, 65);
 }
 
- #sparkitectureNav{
+#sparkitectureNav {
     position: fixed;
-    background-color: white;    
+    background-color: white;
     top: 40px;
-    left: 5px;       
-    z-index: 9; 
-} 
+    left: 5px;
+    z-index: 9;
+}
 
-#sparkitectureNav div{
+#sparkitectureNav div {
     color: white;
     padding-left: 1%;
 }
@@ -43,13 +43,13 @@
     margin-top: 1%;
     padding-left: -1%;
     width: 50%;
-  }
+}
 
-.logoWrapper{
+.logoWrapper {
     width: 100%;
 }
 
-.githubBottom {    
+.githubBottom {
     position: fixed;
     bottom: 0px;
     right: 0px;
@@ -60,7 +60,7 @@
     width: 12%;
 }
 
-.nav-link{
+.nav-link {
     display: table;
     padding: 0px 25px 0px 5px !important;
 }
@@ -77,37 +77,45 @@ span {
     color: black;
 }
 
-.lvl-1{
+.lvl-1 {
     margin-left: 15px;
 }
-.lvl-2{
+
+.lvl-2 {
     margin-left: 30px;
 }
-.lvl-3{
+
+.lvl-3 {
     margin-left: 45px;
 }
-.lvl-4{
+
+.lvl-4 {
     margin-left: 60px;
 }
 
-@media (min-width: 0px) and (max-width: 1800px) { 
-    
-    #sparkitectureNav{
+@media (min-width: 0px) and (max-width: 1800px) {
+    #sparkitectureNav {
         display: none;
-    } 
-
-    #btnTop{
+    }
+    #btnTop {
         display: block;
     }
-
     .logo {
         width: 65%;
         margin-bottom: -30px;
         margin-top: 20px;
-      }
- }
+    }
+}
 
- /* .themeSwitch {
+.na {
+    color: black !important;
+}
+
+.highlighter-rouge {
+    color: black !important;
+}
+
+/* .themeSwitch {
     position: absolute;
     top: 10px;
     left: 5px;
