@@ -82,6 +82,10 @@ a {
     color: blue;
 }
 
+body {
+    width: 100%;
+}
+
 span {
     color: black;
 }
