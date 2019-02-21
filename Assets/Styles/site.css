@@ -86,6 +86,10 @@ body {
     width: 100%;
 }
 
+table {
+    width: auto !important;
+}
+
 span {
     color: black;
 }
