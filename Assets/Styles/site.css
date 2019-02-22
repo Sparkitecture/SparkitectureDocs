@@ -1,6 +1,6 @@
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+/* .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin: 25px 0px 25px 0px;
-}
+} */
 
 #btnTop {
     display: none;
@@ -35,7 +35,7 @@
 }
 
 #sparkitectureNav div {
-    color: white;
+    /* color: white; */
     padding-left: 1%;
 }
 
@@ -70,19 +70,19 @@
     padding: 0px 25px 0px 5px !important;
 }
 
-.active a {
+/* .active a {
     color: white !important;
-}
+} */
 
 #mainContent {
     z-index: 99;
 }
 
-a {
+/* a {
     color: blue;
-}
+} */
 
-html, body{
+/* html, body{
     height:100%;
     width: 100%;
 }
@@ -93,7 +93,7 @@ table {
 
 span {
     color: black;
-}
+} */
 
 .lvl-1 {
     margin-left: 15px;
