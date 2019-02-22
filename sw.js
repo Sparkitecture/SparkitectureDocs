@@ -46,8 +46,8 @@ self.addEventListener('install', function (e) {
 });
 
 self.addEventListener('activate', function(e){
-  e.waitUntil(
-    //Promise to do this later ;D
-  );
+  // e.waitUntil(
+  //   Promise to do this later ;D
+  // );
   console.log('Sparkitecture Docs service worker has activated');
-})
+});
