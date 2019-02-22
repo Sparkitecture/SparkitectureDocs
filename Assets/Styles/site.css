@@ -75,7 +75,7 @@
 }
 
 a {
-    color: blue;
+    color: blue !important;
 }
 
 span {
