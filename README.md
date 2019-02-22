@@ -7,10 +7,10 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
 | Build | Status |
 | :---- | -----: |
 | Sparkitecture-CI | ![TFS Build Status](https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/150/badge) |
-| Sparkitecture-Publish-Server | *(unavailable)* |
+<!-- | Sparkitecture-Publish-Server | *(unavailable)* | -->
 | Mobile - CI | ![TFS Build Status](https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/151/badge) |
-| Mobile - Release - DEV | *(unavailible)* |
-| Mobile - Release - QA | *(unavailible)* |
+<!-- | Mobile - Release - DEV | *(unavailible)* |
+| Mobile - Release - QA | *(unavailible)* | -->
 
 ## Table of Contents <!-- omit in toc -->
 
