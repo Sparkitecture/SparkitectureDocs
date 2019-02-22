@@ -70,9 +70,9 @@
     padding: 0px 25px 0px 5px !important;
 }
 
-/* .active a {
+.active a {
     color: white !important;
-} */
+}
 
 #mainContent {
     z-index: 99;

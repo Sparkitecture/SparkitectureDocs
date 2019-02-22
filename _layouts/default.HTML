@@ -9,10 +9,13 @@
 
   {% seo %}
   <!-- <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}"> -->
-  <link rel="stylesheet" href="{{ "/Assets/Styles/style.css" | relative_url }}"> 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <link rel="stylesheet" href="{{ "/Assets/Styles/site.css" | relative_url }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="{{ "/Assets/Styles/style.css" | relative_url }}">  
+
+  
   <link rel="manifest" href="{{ "/manifest.json" | relative_url }}" />
   <link rel="apple-touch-startup-image" href="{{ "/Assets/Images/logo-192.png" | relative_url }}">
   <link rel="apple-touch-icon" href="{{ "/Assets/Images/icon-192.png" | relative_url }}">
@@ -152,7 +155,7 @@
       </div>
 
 
-      <div id="mainContent" class="col-12 col-md-10 col-lg-10 col-xl-10 mx-auto ">
+      <div id="mainContent" class="col-12 col-md-10 col-lg-10 col-xl-10 mx-auto markdown-body">
 
         {{ content }}
 
