@@ -12,10 +12,10 @@
 
   <link rel="stylesheet" href="{{ "/Assets/Styles/site.css" | relative_url }}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-  <link rel="stylesheet" href="{{ "/Assets/Styles/style.css" | relative_url }}">  
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ "/Assets/Styles/style.css" | relative_url }}">
 
-  
+
   <link rel="manifest" href="{{ "/manifest.json" | relative_url }}" />
   <link rel="apple-touch-startup-image" href="{{ "/Assets/Images/logo-192.png" | relative_url }}">
   <link rel="apple-touch-icon" href="{{ "/Assets/Images/icon-192.png" | relative_url }}">
@@ -25,7 +25,7 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
@@ -33,24 +33,26 @@
     crossorigin="anonymous"></script>
 
   <script>
-    navigator.serviceWorker && navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function (registration) {
-      console.log('Sparkitecture Docs service worker, registered with scope: ', registration.scope);
-    });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker && navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function (registration) {
+        console.log('Sparkitecture Docs service worker, registered with scope: ', registration.scope)        
+      }).catch(err => console.error('Theres a problem registering service worker', err));
+    }
   </script>
 </head>
 
 <body id="sparkitecture" style="position: relative;">
 
   <div class="container-fluid">
-  {% if site.logo %}
-  <div class="logoWrapper">
-    <a href="{{ "/" | absolute_url }}">
-      <img class="logo" src="{{site.logo | relative_url}}" alt="Logo" />
-    </a>
-  </div>
-  {% endif %}
+    {% if site.logo %}
+    <div class="logoWrapper">
+      <a href="{{ "/" | absolute_url }}">
+        <img class="logo" src="{{site.logo | relative_url}}" alt="Logo" />
+      </a>
+    </div>
+    {% endif %}
 
-  <!-- <div class="custom-control custom-switch themeSwitch">
+    <!-- <div class="custom-control custom-switch themeSwitch">
     <input type="checkbox" class="custom-control-input" id="themeSwitch">
     <label class="custom-control-label" for="themeSwitch">Change Theme</label>
   </div> -->
@@ -86,7 +88,8 @@
                   Sparkitecture</a></div>
               <nav class="nav nav-pills flex-column">
                 <div class="nav-link lvl-2 my-1" href="#getting-the-files-and-connecting-to-source-control">
-                  <a href="{{ "#getting-source-code-and-connecting-to-TFS | absolute_url }}">Getting source code and connecting to TFS</a></div>
+                  <a href="{{ "#getting-source-code-and-connecting-to-TFS | absolute_url }}">Getting source code and
+                    connecting to TFS</a></div>
                 <div class="nav-link lvl-2 my-1" href="#setting-up-the-server-solution-web-project">
                   <a href="{{ "#setting-up-the-server-solution-web-project" | absolute_url }}">Setting up the Server
                     solution
@@ -218,7 +221,7 @@
         }
       }
     }
-    
+
     function topFunction() {
       var pathname = window.location.pathname;
       if (pathname.startsWith("/SparkitectureDocs/Docs/")) {

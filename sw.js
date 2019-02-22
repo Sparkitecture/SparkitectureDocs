@@ -16,7 +16,6 @@ self.addEventListener('install', function (e) {
         '/SparkitectureDocs/README.md',
         '/SparkitectureDocs/Docs/mobile.md',
         '/SparkitectureDocs/Docs/mobile.html',
-        //'/SparkitectureDocs/sw.js',
         '/SparkitectureDocs/manifest.json',        
         'https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/150/badge',
         'https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/151/badge',
@@ -45,3 +44,10 @@ self.addEventListener('install', function (e) {
     })
   );
 });
+
+self.addEventListener('activate', function(e){
+  e.waitUntil(
+    //Promise to do this later ;D
+  );
+  console.log('Sparkitecture Docs service worker has activated');
+})
