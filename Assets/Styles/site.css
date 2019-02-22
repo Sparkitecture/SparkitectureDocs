@@ -33,7 +33,7 @@
 
 #sparkitectureNav div {
     color: white;
-    padding-left: 1%;
+    /* padding-left: 1%; */
 }
 
 .logo {
@@ -63,7 +63,7 @@
 
 .nav-link {
     display: table;
-    padding: 0px 25px 0px 5px !important;
+    padding: 0px 0px 0px 5px !important;
 }
 
 .active a {

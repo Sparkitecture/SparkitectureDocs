@@ -17,7 +17,7 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
       - [Installing Node.js and npm](#installing-nodejs-and-npm)
       - [Installing the Angular CLI](#installing-the-angular-cli)
   - [Setting Up Sparkitecture](#setting-up-sparkitecture)
-    - [Getting the files and connecting to source control](#getting-the-files-and-connecting-to-source-control)
+    - [Getting the files and connecting to source control](#getting-source-code-and-connecting-to-TFS)
     - [Setting up the Server solution (Web Project)](#setting-up-the-server-solution-web-project)
     - [Setting up a local database](#setting-up-a-local-database)
     - [Running the web app](#running-the-web-app)
@@ -81,7 +81,7 @@ ng v
 
 ### Setting Up Sparkitecture
 
-#### Getting the files and connecting to source control
+#### Getting source code and connecting to TFS
 
 - Open Visual Studio and navigate to "Team Explorer"
 - Click the green plug at the top of the window
