@@ -55,7 +55,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    width: 25%;
+    width: 15%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -110,6 +110,10 @@ span {
     .logo {
         width: 65%;
         margin-top: 20px;
+    }
+
+    .githubBottom {
+        width: 30%;
     }
 }
 
