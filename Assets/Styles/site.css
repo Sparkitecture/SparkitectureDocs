@@ -55,14 +55,13 @@
 }
 
 .githubBottom {
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-    z-index: 99;
     border: none;
     outline: none;
     cursor: pointer;
-    width: 12%;
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav-link {
