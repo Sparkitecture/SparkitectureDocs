@@ -35,7 +35,7 @@
 }
 
 #sparkitectureNav div {
-    /* color: white; */
+    color: white;
     padding-left: 1%;
 }
 
@@ -78,9 +78,9 @@
     z-index: 99;
 }
 
-/* a {
+a {
     color: blue;
-} */
+}
 
 /* html, body{
     height:100%;
@@ -89,11 +89,11 @@
 
 table {
     width: auto !important;
-}
+}*/
 
 span {
     color: black;
-} */
+} 
 
 .lvl-1 {
     margin-left: 15px;
