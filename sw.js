@@ -43,6 +43,7 @@ self.addEventListener('install', function (e) {
         '/SparkitectureDocs/sw.js',
         '/SparkitectureDocs/manifest.json',
         '/SparkitectureDocs/Assets/Styles/site.css',
+        '/SparkitectureDocs/Assets/Styles/style.css',
         '/SparkitectureDocs/Assets/Images/additionalquestions.png',
         '/SparkitectureDocs/Assets/Images/categories.png',
         '/SparkitectureDocs/Assets/Images/editrating.png',
