@@ -6,7 +6,13 @@ self.addEventListener('fetch', function (e) {
     caches.match(e.request).then(function (response) {
       return response || fetch(e.request);
     }).catch(
-      e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }))      
+      //e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }))  
+      
+      e.respondWith(
+        caches.match(new Request("/_layouts/offline.html")).then(function (response){
+          return response || fetch(new Request("/_layouts/offline.html"));
+        })
+      )    
     )
   );
 
