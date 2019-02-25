@@ -9,8 +9,8 @@ self.addEventListener('fetch', function (e) {
       //e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }))  
       
       e.respondWith(
-        caches.match(new Request("/_layouts/offline.html")).then(function (response){
-          return response || fetch(new Request("/_layouts/offline.html"));
+        caches.match(new Request("/offline.html")).then(function (response){
+          return response || fetch(new Request("/offline.html"));
         })
       )    
     )
@@ -26,6 +26,7 @@ self.addEventListener('install', function (e) {
     caches.open(cacheName).then(function (cache) {
       return cache.addAll([
         '/SparkitectureDocs/',
+        '/SparkitectureDocs/offline.html',
         '/SparkitectureDocs/index.html',
         '/SparkitectureDocs/README.md',
         '/SparkitectureDocs/Docs/mobile.md',
