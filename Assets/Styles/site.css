@@ -148,6 +148,9 @@ span {
         width: 65%;
         margin-top: 20px;
     }
+    .logoOffline {
+        margin-bottom: 2% !important;
+    }
     .githubBottom {
         width: 30%;
     }
