@@ -2,10 +2,16 @@ const version = 0;
 
 self.addEventListener('fetch', function (e) {
   e.respondWith(
-    caches.match(e.request).then(function(response) {
+    caches.match(e.request).then(function (response) {
       return response || fetch(e.request);
-    })
-  ); 
+    }).catch(
+      e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }))      
+    )
+  );
+
+  if (!navigator.onLine) {
+    e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }));
+  }
 });
 
 self.addEventListener('install', function (e) {
@@ -17,7 +23,7 @@ self.addEventListener('install', function (e) {
         '/SparkitectureDocs/README.md',
         '/SparkitectureDocs/Docs/mobile.md',
         '/SparkitectureDocs/Docs/mobile.html',
-        '/SparkitectureDocs/manifest.json',        
+        '/SparkitectureDocs/manifest.json',
         'https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/150/badge',
         'https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/151/badge',
         '/SparkitectureDocs/Assets/Styles/site.css',
@@ -46,7 +52,7 @@ self.addEventListener('install', function (e) {
   );
 });
 
-self.addEventListener('activate', function(e){
+self.addEventListener('activate', function (e) {
   // e.waitUntil(
   //   Promise to do this later ;D
   // );
