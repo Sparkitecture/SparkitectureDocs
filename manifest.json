@@ -13,22 +13,7 @@
       "src": "/SparkitectureDocs/sw.js",
       "scope": "/SparkitectureDocs/"
     },
-    "icons": [
-          {
-            "src": "/SparkitectureDocs/Assets/Images/icon-36.png",
-            "sizes": "36x36",
-            "type": "image/png"
-          },
-          {
-            "src": "/SparkitectureDocs/Assets/Images/icon-36.png",
-            "sizes": "48x48",
-            "type": "image/png"
-          },
-          {
-            "src": "/SparkitectureDocs/Assets/Images/icon-72.png",
-            "sizes": "72x72",
-            "type": "image/png"
-          },
+    "icons": [          
           {
             "src": "/SparkitectureDocs/Assets/Images/icon-96.png",
             "sizes": "96x96",
