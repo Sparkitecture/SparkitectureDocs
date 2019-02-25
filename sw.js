@@ -1,4 +1,4 @@
-const version = "0.0.08";
+const version = "0.0.09";
 const cacheName = `sparkitecture-cache-${version}`;
 
 self.addEventListener('install', function (e) {
@@ -7,10 +7,13 @@ self.addEventListener('install', function (e) {
     e.waitUntil(
       caches.open(cacheName).then(function (cache) {
         return cache.addAll([
-         '/SparkitectureDocs/',
+          '/SparkitectureDocs/',
           '/SparkitectureDocs/offline.html',
+          '/SparkitectureDocs/offline',
           '/SparkitectureDocs/index.html',
+          '/SparkitectureDocs/index',
           '/SparkitectureDocs/Docs/mobile.html',
+          '/SparkitectureDocs/Docs/mobile',
           '/SparkitectureDocs/manifest.json',
           'https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/150/badge',
           'https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/151/badge',
