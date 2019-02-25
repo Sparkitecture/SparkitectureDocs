@@ -6,8 +6,8 @@ self.addEventListener('fetch', function (e) {
     caches.match(e.request).then(function (response) {
       return response || fetch(e.request);
     }).catch(
-      caches.match(new Request("/offline.html")).then(function (response) {
-        return response || fetch(new Request("/offline.html"));
+      caches.match(new Request("/SparkitectureDocs/offline.html")).then(function (response) {
+        return response || fetch(new Request("/SparkitectureDocs/offline.html"));
       })
     )
   );
