@@ -1,4 +1,4 @@
-const version = "0.0.06";
+const version = "0.0.07";
 const cacheName = `sparkitecture-cache-${version}`;
 
 self.addEventListener('fetch', function (e) {
@@ -36,9 +36,9 @@ self.addEventListener('install', function (e) {
           'https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/150/badge',
           'https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/151/badge',
           '/SparkitectureDocs/Assets/Styles/site.css',
-          '/SparkitectureDocs/Assets/Styles/style.css',          
-          '/SparkitectureDocs/Assets/Styles/bootstrap.min.css', 
-          '/SparkitectureDocs/Assets/Scripts/jquery-3.3.1.min.js', 
+          '/SparkitectureDocs/Assets/Styles/style.css',
+          '/SparkitectureDocs/Assets/Styles/bootstrap.min.css',
+          '/SparkitectureDocs/Assets/Scripts/jquery-3.3.1.min.js',
           '/SparkitectureDocs/Assets/Scripts/bootstrap.bundle.min.js',
           '/SparkitectureDocs/Assets/Images/offline-dino.gif',
           '/SparkitectureDocs/Assets/Images/additionalquestions.png',
@@ -69,8 +69,14 @@ self.addEventListener('install', function (e) {
 });
 
 self.addEventListener('activate', function (e) {
-  // e.waitUntil(
-  //   Promise to do this later ;D
-  // );
+  e.waitUntil(
+    caches.keys()
+      .then(function (keys) {
+        return Promise.all(keys.filter(function (key) {
+          return key !== cacheName;
+        }).map(function (key) {
+          return caches.delete(key);
+        }));
+      }));
   console.log('Sparkitecture Docs service worker v%s has activated at', version, new Date().toLocaleTimeString());
 });
