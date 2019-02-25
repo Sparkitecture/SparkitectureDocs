@@ -9,9 +9,9 @@ self.addEventListener('fetch', function (e) {
     )
   );
 
-  if (!navigator.onLine) {
-    e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }));
-  }
+  // if (!navigator.onLine) {
+  //   e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }));
+  // }
 });
 
 self.addEventListener('install', function (e) {
@@ -47,7 +47,7 @@ self.addEventListener('install', function (e) {
         '/SparkitectureDocs/Assets/Images/playstorecats3.png',
         '/SparkitectureDocs/Assets/Images/playstorecats4.png',
         '/SparkitectureDocs/Assets/Images/playstorerating.png'
-      ]).then(r => console.log('Sparkitecture Docs service worker v% has installed at', version, new Date().toLocaleTimeString()));
+      ]).then(r => console.log('Sparkitecture Docs service worker v%s has installed at', version, new Date().toLocaleTimeString()));
     })
   );
 });
@@ -56,5 +56,5 @@ self.addEventListener('activate', function (e) {
   // e.waitUntil(
   //   Promise to do this later ;D
   // );
-  console.log('Sparkitecture Docs service worker v% has activated at', version, new Date().toLocaleTimeString());
+  console.log('Sparkitecture Docs service worker v%s has activated at', version, new Date().toLocaleTimeString());
 });
