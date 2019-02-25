@@ -2,26 +2,19 @@ const version = "0.0.01";
 const cacheName = `sparkitecture-cache-${version}`;
 
 self.addEventListener('fetch', function (e) {
-  try {
   e.respondWith(
     caches.match(e.request).then(function (response) {
       return response || fetch(e.request);
-    })
-  );    
-  } catch (error) {
-    
-      //e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }))  
-      
-      e.respondWith(
-        caches.match(new Request("/offline.html")).then(function (response){
-          return response || fetch(new Request("/offline.html"));
-        })          
-    );
-  }
+    }).catch(
+      caches.match(new Request("/offline.html")).then(function (response) {
+        return response || fetch(new Request("/offline.html"));
+      })
+    )
+  );
+});
   // if (!navigator.onLine) {
   //   e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }));
   // }
-});
 
 self.addEventListener('install', function (e) {
   e.waitUntil(
@@ -58,8 +51,8 @@ self.addEventListener('install', function (e) {
         '/SparkitectureDocs/Assets/Images/playstorecats4.png',
         '/SparkitectureDocs/Assets/Images/playstorerating.png'
       ])
-      .then(() => self.skipWaiting())
-      .then(r => console.log('Sparkitecture Docs service worker v%s has installed at', version, new Date().toLocaleTimeString()));
+        .then(() => self.skipWaiting())
+        .then(r => console.log('Sparkitecture Docs service worker v%s has installed at', version, new Date().toLocaleTimeString()));
     })
   );
 });
