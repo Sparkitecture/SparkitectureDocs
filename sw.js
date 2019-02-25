@@ -1,4 +1,4 @@
-const version = "0.0.04";
+const version = "0.0.05";
 const cacheName = `sparkitecture-cache-${version}`;
 
 self.addEventListener('fetch', function (e) {
