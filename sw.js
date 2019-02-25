@@ -1,26 +1,5 @@
-const version = "0.0.07";
+const version = "0.0.08";
 const cacheName = `sparkitecture-cache-${version}`;
-
-self.addEventListener('fetch', function (e) {
-
-  if (!navigator.onLine) {
-    e.respondWith(
-      caches.match(e.request).then(function (response) {
-        return response || fetch(new Request("/SparkitectureDocs/offline.html"));
-      })
-    );
-  } else {
-    e.respondWith(
-      caches.match(e.request).then(function (response) {
-        return response || fetch(e.request);
-      })
-    );
-  }
-});
-
-// if (!navigator.onLine) {
-//   e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }));
-// }
 
 self.addEventListener('install', function (e) {
   if (!navigator.onLine) {
@@ -28,7 +7,7 @@ self.addEventListener('install', function (e) {
     e.waitUntil(
       caches.open(cacheName).then(function (cache) {
         return cache.addAll([
-          // '/SparkitectureDocs/',
+         '/SparkitectureDocs/',
           '/SparkitectureDocs/offline.html',
           '/SparkitectureDocs/index.html',
           '/SparkitectureDocs/Docs/mobile.html',
@@ -68,6 +47,22 @@ self.addEventListener('install', function (e) {
   }
 });
 
+
+self.addEventListener('fetch', function (e) {
+    e.respondWith(
+      caches.match(e.request)
+      .then(function (res) {
+        if (res) 
+          return res;
+
+        if (!navigator.onLine)
+          return caches.match(new Request(''));
+
+        return fetchAndUpdate(e.request);
+      }));
+});
+
+
 self.addEventListener('activate', function (e) {
   e.waitUntil(
     caches.keys()
@@ -80,3 +75,35 @@ self.addEventListener('activate', function (e) {
       }));
   console.log('Sparkitecture Docs service worker v%s has activated at', version, new Date().toLocaleTimeString());
 });
+
+
+function fetchAndUpdate(request) {
+  return fetch(request)
+    .then(function (res) {
+      if (res) {
+        return caches.open(cacheName)
+          .then(function (cache) {
+            return cache.put(request, res.clone())
+              .then(function () {
+                return res;
+              });
+          });
+      }
+    });
+}
+
+//Previous fetch code, dont judge me:
+
+  // if (!navigator.onLine) {
+  //   e.respondWith(
+  //     caches.match(e.request).then(function (response) {
+  //       return response || fetch(new Request("/SparkitectureDocs/offline.html"));
+  //     })
+  //   );
+  // } else {
+  //   e.respondWith(
+  //     caches.match(e.request).then(function (response) {
+  //       return response || fetch(e.request);
+  //     })
+  //   );
+  // }
