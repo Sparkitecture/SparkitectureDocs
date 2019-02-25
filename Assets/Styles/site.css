@@ -98,6 +98,38 @@ span {
     margin-left: 60px;
 }
 
+.na {
+    color: black !important;
+}
+
+.card {
+    background-color:  rgb(129, 190, 65) !important;    
+    border: 1px solid rgb(0, 56, 48) !important;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.highlighter-rouge {
+    color: black !important;
+}
+
+.offlineosaur {
+    width: 48%;
+    display: block;
+    margin: 0 auto;
+}
+
+.offlinetext {
+    font-size: 200%;
+    font-weight: 600;
+    color: rgb(0, 56, 48);
+    text-align: center;
+}
+
+.offlineContent{
+    margin: 0 auto;
+}
+
 @media (min-width: 0px) and (max-width: 1500px) {
 
      #sparkitectureNav {
@@ -115,14 +147,14 @@ span {
     .githubBottom {
         width: 30%;
     }
-}
 
-.na {
-    color: black !important;
-}
+    .offlineosaur {
+        width: 75%;
+    }
 
-.highlighter-rouge {
-    color: black !important;
+    .card {
+        width: 75%;
+    }
 }
 
 /* .themeSwitch {

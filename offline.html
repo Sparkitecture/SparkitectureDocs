@@ -1,2 +1,138 @@
-<img  src="/SparkitectureDocs/Assets/Images/offline-dino.gif" alt="Offline Dinosaur" >
-<label>Oh no! Looks like you lost connection!</label>
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#81be41">
+
+    <link rel="stylesheet" href="/Assets/Styles/site.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Assets/Styles/style.css">
+
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-startup-image" href="/Assets/Images/logo-192.png">
+    <link rel="apple-touch-icon" href="/Assets/Images/icon-192.png">
+    <link rel="icon" sizes="192x192" href="/Assets/Images/icon-192.png">
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker && navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function (registration) {
+                console.log('Sparkitecture Docs service worker, registered with scope: ', registration.scope)
+            }).catch(err => console.error('Theres a problem registering service worker', err));
+        }
+    </script>
+</head>
+
+<body id="sparkitecture" style="position: relative;">
+
+    <div class="container-fluid">
+        <div class="logoWrapper">
+            <a href="/SparkitectureDocs/">
+                <img class="logo" src="/Assets/Images/navbar-logo.png" alt="Logo" />
+            </a>
+        </div>
+
+
+        <div class="row">
+            <div id="mainContent" class="col-12">
+
+                <div class="offlineContent">
+                    <div class="card">
+                        <div class="card-body">
+                            <label class="offlinetext col-12">Oh no! Looks like you lost connection!</label>
+                        </div>
+                    </div>
+                    <img class="offlineosaur" src="/Assets/Images/offline-dino-green.gif" alt="Offline Dinosaur"><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add scrollspy to <body>
+        $('body').scrollspy({ target: "#sparkitectureNav", offset: 60 });
+
+        // Add smooth scrolling on all links inside the navbar
+        $("#sparkitectureNav a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            var pathname = window.location.pathname;
+            var hrefURL = $(this).attr('href');
+
+
+            if (hrefURL.startsWith("https://sparkitecture.github.io/SparkitectureDocs/Docs/")) { //Link is outside readme
+                if (pathname.startsWith("/SparkitectureDocs/Docs/")) {
+                    scrollitslow($(this));
+                }
+            } else {
+                if (!pathname.startsWith("/SparkitectureDocs/Docs/")) {
+                    scrollitslow($(this));
+                }
+            }
+        });
+
+        function scrollitslow(mylink) {
+            if (mylink[0].hash !== "") {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = mylink[0].hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+
+            }
+        }
+
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (screen.width <= 1800) {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("btnTop").style.display = "block";
+                } else {
+                    document.getElementById("btnTop").style.display = "none";
+                }
+            }
+        }
+
+        function topFunction() {
+            var pathname = window.location.pathname;
+            if (pathname.startsWith("/SparkitectureDocs/Docs/")) {
+                window.location.href = '../';
+            } else {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        }
+
+        $(function () {
+            $('table').addClass('table-hover');
+        });
+    </script>
+</body>
+
+</html>

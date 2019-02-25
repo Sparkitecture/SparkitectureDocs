@@ -1,4 +1,4 @@
-const version = "0.0.02";
+const version = "0.0.03";
 const cacheName = `sparkitecture-cache-${version}`;
 
 self.addEventListener('fetch', function (e) {
@@ -31,7 +31,7 @@ self.addEventListener('install', function (e) {
         'https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/151/badge',
         '/SparkitectureDocs/Assets/Styles/site.css',
         '/SparkitectureDocs/Assets/Styles/style.css',
-        '/SparkitectureDocs/Assets/Images/offline-dino.gif',
+        '/SparkitectureDocs/Assets/Images/offline-dino-green.gif',
         '/SparkitectureDocs/Assets/Images/additionalquestions.png',
         '/SparkitectureDocs/Assets/Images/categories.png',
         '/SparkitectureDocs/Assets/Images/editrating.png',
