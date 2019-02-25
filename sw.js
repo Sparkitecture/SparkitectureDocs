@@ -48,7 +48,9 @@ self.addEventListener('install', function (e) {
         '/SparkitectureDocs/Assets/Images/playstorecats3.png',
         '/SparkitectureDocs/Assets/Images/playstorecats4.png',
         '/SparkitectureDocs/Assets/Images/playstorerating.png'
-      ]).then(r => console.log('Sparkitecture Docs service worker v%s has installed at', version, new Date().toLocaleTimeString()));
+      ])
+      .then(() => self.skipWaiting())
+      .then(r => console.log('Sparkitecture Docs service worker v%s has installed at', version, new Date().toLocaleTimeString()));
     })
   );
 });
