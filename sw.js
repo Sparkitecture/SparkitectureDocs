@@ -1,17 +1,23 @@
-const version = "0.0.03";
+const version = "0.0.04";
 const cacheName = `sparkitecture-cache-${version}`;
 
 self.addEventListener('fetch', function (e) {
-  e.respondWith(
-    caches.match(e.request).then(function (response) {
-      return response || fetch(e.request);
-    }).catch(
-      caches.match(new Request("/SparkitectureDocs/offline.html")).then(function (response) {
+
+  if (!navigator.onLine) {
+    e.respondWith(
+      caches.match(e.request).then(function (response) {
         return response || fetch(new Request("/SparkitectureDocs/offline.html"));
       })
-    )
-  );
+    );
+  }else{
+    e.respondWith(
+      caches.match(e.request).then(function (response) {
+        return response || fetch(e.request);
+      })
+    );
+  }
 });
+
 // if (!navigator.onLine) {
 //   e.respondWith(new Response('<h1> Offline :( </h1>', { headers: { 'Content-Type': 'text/html' } }));
 // }
@@ -21,11 +27,9 @@ self.addEventListener('install', function (e) {
     e.waitUntil(
       caches.open(cacheName).then(function (cache) {
         return cache.addAll([
-          '/SparkitectureDocs/',
+         // '/SparkitectureDocs/',
           '/SparkitectureDocs/offline.html',
           '/SparkitectureDocs/index.html',
-          // '/SparkitectureDocs/README.md',
-          // '/SparkitectureDocs/Docs/mobile.md',
           '/SparkitectureDocs/Docs/mobile.html',
           '/SparkitectureDocs/manifest.json',
           'https://tfs.sparkhound.com/Sparkhound/_apis/public/build/definitions/81ae018a-0136-4767-9622-61e13d1d7541/150/badge',
