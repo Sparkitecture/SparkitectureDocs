@@ -1,4 +1,4 @@
-const version = "0.0.11";
+const version = "0.0.12";
 const cacheName = `sparkitecture-cache-${version}`;
 
 self.addEventListener('install', function (e) {
@@ -92,19 +92,3 @@ function fetchAndUpdate(request) {
       }
     });
 }
-
-//Previous fetch code, dont judge me:
-
-  // if (!navigator.onLine) {
-  //   e.respondWith(
-  //     caches.match(e.request).then(function (response) {
-  //       return response || fetch(new Request("/SparkitectureDocs/offline.html"));
-  //     })
-  //   );
-  // } else {
-  //   e.respondWith(
-  //     caches.match(e.request).then(function (response) {
-  //       return response || fetch(e.request);
-  //     })
-  //   );
-  // }
