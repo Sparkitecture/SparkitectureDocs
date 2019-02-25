@@ -31,7 +31,7 @@
 
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker && navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function (registration) {
+            navigator.serviceWorker && navigator.serviceWorker.register('/sw.js').then(function (registration) {
                 console.log('Sparkitecture Docs service worker, registered with scope: ', registration.scope)
             }).catch(err => console.error('Theres a problem registering service worker', err));
         }
