@@ -1,4 +1,5 @@
-const version = 0;
+const version = "0.0.01";
+const cacheName = `sparkitecture-cache-${version}`;
 
 self.addEventListener('fetch', function (e) {
   e.respondWith(
@@ -16,7 +17,7 @@ self.addEventListener('fetch', function (e) {
 
 self.addEventListener('install', function (e) {
   e.waitUntil(
-    caches.open('sparkitecture-cache').then(function (cache) {
+    caches.open(cacheName).then(function (cache) {
       return cache.addAll([
         '/SparkitectureDocs/',
         '/SparkitectureDocs/index.html',
