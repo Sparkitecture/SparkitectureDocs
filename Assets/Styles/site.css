@@ -1,4 +1,3 @@
-
 #btnTop {
     display: none;
     position: fixed;
@@ -51,6 +50,10 @@
     z-index: 101;
 }
 
+.logoOffline {
+    margin-bottom: 0 !important;
+}
+
 .githubBottom {
     border: none;
     outline: none;
@@ -80,7 +83,7 @@ a {
 
 span {
     color: black;
-} 
+}
 
 .lvl-1 {
     margin-left: 15px;
@@ -102,12 +105,12 @@ span {
     color: black !important;
 }
 
-.nav-brand{
+.nav-brand {
     color: rgb(0, 56, 48) !important;
 }
 
 .card {
-    background-color:  rgb(129, 190, 65) !important;    
+    background-color: rgb(129, 190, 65) !important;
     border: 1px solid rgb(0, 56, 48) !important;
     width: 50%;
     margin: 0 auto;
@@ -130,16 +133,14 @@ span {
     text-align: center;
 }
 
-.offlineContent{
+.offlineContent {
     margin: 0 auto;
 }
 
 @media (min-width: 0px) and (max-width: 1500px) {
-
-     #sparkitectureNav {
+    #sparkitectureNav {
         display: none;
-    } 
-
+    }
     #btnTop {
         display: block;
     }
@@ -147,15 +148,12 @@ span {
         width: 65%;
         margin-top: 20px;
     }
-
     .githubBottom {
         width: 30%;
     }
-
     .offlineosaur {
         width: 75%;
     }
-
     .card {
         width: 75%;
     }
