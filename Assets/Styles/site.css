@@ -102,6 +102,10 @@ span {
     color: black !important;
 }
 
+.nav-brand{
+    color: rgb(0, 56, 48) !important;
+}
+
 .card {
     background-color:  rgb(129, 190, 65) !important;    
     border: 1px solid rgb(0, 56, 48) !important;
