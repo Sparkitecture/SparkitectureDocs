@@ -1,8 +1,8 @@
 //version: This comment initiates a cache refresh when changed
-self.addEventListener('fetch', function (event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
+self.addEventListener('fetch', function (e) {
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
     })
   ); 
 });
@@ -40,7 +40,7 @@ self.addEventListener('install', function (e) {
         '/SparkitectureDocs/Assets/Images/playstorecats3.png',
         '/SparkitectureDocs/Assets/Images/playstorecats4.png',
         '/SparkitectureDocs/Assets/Images/playstorerating.png'
-      ]);
+      ]).then(r => console.log('Sparkitecture Docs successfully installed' + r));
     })
   );
 });
