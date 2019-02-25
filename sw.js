@@ -1,4 +1,5 @@
-//version: This comment initiates a cache refresh when changed
+const version = 0;
+
 self.addEventListener('fetch', function (e) {
   e.respondWith(
     caches.match(e.request).then(function(response) {
@@ -40,7 +41,7 @@ self.addEventListener('install', function (e) {
         '/SparkitectureDocs/Assets/Images/playstorecats3.png',
         '/SparkitectureDocs/Assets/Images/playstorecats4.png',
         '/SparkitectureDocs/Assets/Images/playstorerating.png'
-      ]).then(r => console.log('Sparkitecture Docs successfully installed' + r));
+      ]).then(r => console.log('Sparkitecture Docs service worker v% has installed at', version, new Date().toLocaleTimeString()));
     })
   );
 });
@@ -49,5 +50,5 @@ self.addEventListener('activate', function(e){
   // e.waitUntil(
   //   Promise to do this later ;D
   // );
-  console.log('Sparkitecture Docs service worker has activated');
+  console.log('Sparkitecture Docs service worker v% has activated at', version, new Date().toLocaleTimeString());
 });
