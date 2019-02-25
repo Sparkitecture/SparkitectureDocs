@@ -9,9 +9,7 @@ self.addEventListener('install', function (e) {
         return cache.addAll([
           '/SparkitectureDocs/',
           '/SparkitectureDocs/offline.html',
-          '/SparkitectureDocs/offline',
           '/SparkitectureDocs/index.html',
-          '/SparkitectureDocs/index',
           '/SparkitectureDocs/Docs/mobile.html',
           '/SparkitectureDocs/Docs/mobile',
           '/SparkitectureDocs/manifest.json',
