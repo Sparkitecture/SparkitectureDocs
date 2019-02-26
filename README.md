@@ -222,6 +222,8 @@ Now the Sparkitecture Command templates have been added to Visual Studio!
 - Hover over "Add"
 - Click "New Item..."
 - Search for "Command" (it will have a green Sparkhound logo and read "Visual C# Items")
+- **Note: You may need to close and re-open Visual Studio for the template to first appear**
+
 - Our naming convention is to end the command name with the word "Command"
 - Naming convention example:
 
