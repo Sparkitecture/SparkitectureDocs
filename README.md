@@ -207,7 +207,7 @@ This builds and serves your app, rebuilding on file changes
 ### Adding the Command Template
 
 - In the project root locate `/tools/item templates/Command.zip`
-- Unzip the file and paste the contents in
+- Copy the file and paste it into:
 
 ``` string
 C:\Users\$USER$\Documents\Visual Studio 2017\Templates\ItemTemplates\Visual C#\
@@ -217,12 +217,12 @@ Now the Sparkitecture Command templates have been added to Visual Studio!
 
 #### Using the Command Template
 
-- Open a project in Visula Studio
-- Right-click the folder you intend to add the command template to.
+- Open a project in Visul Studio
+- Right-click the folder you intend to add the command template to
 - Hover over "Add"
 - Click "New Item..."
 - Search for "Command" (it will have a green Sparkhound logo and read "Visual C# Items")
-- Leave "Command" but remove the trailing digit
+- Our naming convention is to end the command name with the word "Command"
 - Naming convention example:
 
 ``` text
@@ -234,8 +234,6 @@ Now the Sparkitecture Command templates have been added to Visual Studio!
   - SparkitectureDocsTestCommand.cs
   - SparkitectureDocsTestCommandRequest.cs
   - SparkitectureDocsTestCommandResponse.cs
-
-
 
 ## Built With
 
