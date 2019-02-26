@@ -1,4 +1,4 @@
-const version = "0.0.15";
+const version = "0.0.16";
 const cacheName = `sparkitecture-cache-${version}`;
 
 self.addEventListener('install', function (e) {

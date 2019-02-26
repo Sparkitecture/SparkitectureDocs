@@ -217,7 +217,7 @@ Now the Sparkitecture Command templates have been added to Visual Studio!
 
 #### Using the Command Template
 
-- Open a project in Visul Studio
+- Open a project in Visual Studio
 - Right-click the folder you intend to add the command template to
 - Hover over "Add"
 - Click "New Item..."
