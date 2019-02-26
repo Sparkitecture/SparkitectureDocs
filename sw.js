@@ -1,4 +1,4 @@
-const version = "0.0.17";
+const version = "0.0.18";
 const cacheName = `sparkitecture-cache-${version}`;
 
 self.addEventListener('install', function (e) {
@@ -24,12 +24,8 @@ self.addEventListener('install', function (e) {
           '/SparkitectureDocs/Assets/Images/additionalquestions.png',
           '/SparkitectureDocs/Assets/Images/categories.png',
           '/SparkitectureDocs/Assets/Images/editrating.png',
-          '/SparkitectureDocs/Assets/Images/icon-36.png',
-          '/SparkitectureDocs/Assets/Images/icon-48.png',
-          '/SparkitectureDocs/Assets/Images/icon-72.png',
           '/SparkitectureDocs/Assets/Images/icon-96.png',
           '/SparkitectureDocs/Assets/Images/icon-144.png',
-          '/SparkitectureDocs/Assets/Images/icon-192.png',
           '/SparkitectureDocs/Assets/Images/logo-192.png',
           '/SparkitectureDocs/Assets/Images/logo-512.png',
           '/SparkitectureDocs/Assets/Images/navbar-logo.png',
@@ -49,6 +45,20 @@ self.addEventListener('install', function (e) {
 });
 
 
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys()
+      .then(function (keys) {
+        return Promise.all(keys.filter(function (key) {
+          return key !== cacheName;
+        }).map(function (key) {
+          return caches.delete(key);
+        }));
+      }));
+  console.log('Sparkitecture Docs service worker v%s has activated at', version, new Date().toLocaleTimeString());
+});
+
+
 self.addEventListener('fetch', function (e) {
   e.respondWith(
     caches.match(e.request)
@@ -61,20 +71,6 @@ self.addEventListener('fetch', function (e) {
 
         return fetchAndUpdate(e.request);
       }));
-});
-
-
-self.addEventListener('activate', function (e) {
-  e.waitUntil(
-    caches.keys()
-      .then(function (keys) {
-        return Promise.all(keys.filter(function (key) {
-          return key !== cacheName;
-        }).map(function (key) {
-          return caches.delete(key);
-        }));
-      }));
-  console.log('Sparkitecture Docs service worker v%s has activated at', version, new Date().toLocaleTimeString());
 });
 
 
