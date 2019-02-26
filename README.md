@@ -25,6 +25,8 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
 - [Common Operations](#common-operations)
   - [Create a New Component](#create-a-new-component)
   - [Adding a Search Row](#adding-a-search-row)
+  - [Adding the Command Template](#adding-the-command-template)
+    - [Using the Command Template](#using-the-command-template)
 - [Mobile](./Docs/mobile.md#mobile)
   - [App Store](./Docs/mobile.md#app-store)
     - [Create a New App](./Docs/mobile.md#create-a-new-app)
@@ -201,6 +203,39 @@ This builds and serves your app, rebuilding on file changes
 - Import and add an Export to Web\ClientApp\src\app\components\index.ts
 - Import and add a Declaration to Web\ClientApp\src\app\app.module.ts
 - Import and add routing functionality to Web\ClientApp\src\app\app-routing.module.ts
+
+### Adding the Command Template
+
+- In the project root locate `/tools/item templates/Command.zip`
+- Unzip the file and paste the contents in
+
+``` string
+C:\Users\$USER$\Documents\Visual Studio 2017\Templates\ItemTemplates\Visual C#\
+```
+
+Now the Sparkitecture Command templates have been added to Visual Studio!
+
+#### Using the Command Template
+
+- Open a project in Visula Studio
+- Right-click the folder you intend to add the command template to.
+- Hover over "Add"
+- Click "New Item..."
+- Search for "Command" (it will have a green Sparkhound logo and read "Visual C# Items")
+- Leave "Command" but remove the trailing digit
+- Naming convention example:
+
+``` text
+ SparkitectureDocsTestCommand.cs
+```
+
+- Click "Add"
+- The template should have created 3 files in the parent directory
+  - SparkitectureDocsTestCommand.cs
+  - SparkitectureDocsTestCommandRequest.cs
+  - SparkitectureDocsTestCommandResponse.cs
+
+
 
 ## Built With
 
