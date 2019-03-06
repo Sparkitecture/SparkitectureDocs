@@ -21,13 +21,14 @@
 
 
 
-  <script src="{{ "/Assets/Scripts/jquery-3.3.1.min.js" | relative_url }}" ></script>
+  <script src="{{ "/Assets/Scripts/jquery-3.3.1.min.js" | relative_url }}"></script>
   <script src="{{ "/Assets/Scripts/bootstrap.bundle.min.js" | relative_url }}"></script>
 
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker && navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function (registration) {
-        console.log('Sparkitecture Docs service worker, registered with scope: ', registration.scope)        
+      navigator.serviceWorker && navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function (
+        registration) {
+        console.log('Sparkitecture Docs service worker, registered with scope: ', registration.scope)
       }).catch(err => console.error('Theres a problem registering service worker', err));
     }
   </script>
@@ -53,11 +54,11 @@
       <div class="d-none d-lg-block col-lg-3 col-xl-3">
         <nav id="sparkitectureNav" class="navbar navbar-light">
 
-          <nav class="nav nav-pills flex-column">
+          <nav class=" nav-pills flex-column">
             <a class="navbar-brand nav-brand" href="{{ "#" | absolute_url }}">Sparkitecture Docs</a>
-            <div class="nav-link my-1" href="#getting-started">
+            <div id="getting-started-div" class="nav-link my-1" href="#getting-started">
               <a href="{{ "#getting-started" | absolute_url }}">Getting Started</a></div>
-            <nav class="nav nav-pills flex-column">
+            <nav id="getting-started-nav" class="nav nav-pills flex-column navHide">
               <div class="nav-link lvl-1 my-1" href="#prerequisites">
                 <a href="{{ "#prerequisites" | absolute_url }}">Prerequisites</a></div>
               <nav class="nav nav-pills flex-column">
@@ -99,9 +100,9 @@
                 </nav>
               </nav>
             </nav>
-            <div class="nav-link my-1" href="#common-operations">
+            <div id="common-operations-div" class="nav-link my-1" href="#common-operations">
               <a href="{{ "#common-operations" | absolute_url }}">Common Operations</a></div>
-            <nav class="nav nav-pills flex-column">
+            <nav id="common-operations-nav" class="nav nav-pills flex-column navHide">
               <div class="nav-link lvl-1 my-1" href="#create-a-new-component">
                 <a href="{{ "#create-a-new-component" | absolute_url }}">Create a New
                   Component</a></div>
@@ -109,17 +110,17 @@
                 <a href="{{ "#adding-a-search-row" | absolute_url }}">Adding a Search Row</a>
               </div>
               <div class="nav-link lvl-1 my-1" href="#adding-the-command-template">
-                  <a href="{{ "#adding-the-command-template" | absolute_url }}">Adding the Command Template</a>
+                <a href="{{ "#adding-the-command-template" | absolute_url }}">Adding the Command Template</a>
+              </div>
+              <nav class="nav nav-pills flex-column">
+                <div class="nav-link lvl-2 my-1" href="#using-the-command-template">
+                  <a href="{{ "#using-the-command-template" | absolute_url }}">Using the Command Template</a>
                 </div>
-                <nav class="nav nav-pills flex-column">
-                    <div class="nav-link lvl-2 my-1" href="#using-the-command-template">
-                        <a href="{{ "#using-the-command-template" | absolute_url }}">Using the Command Template</a>
-                      </div>
-                </nav>
+              </nav>
             </nav>
-            <div class="nav-link my-1" href="#mobile">
+            <div id="mobile-div" class="nav-link my-1" href="#mobile">
               <a href="{{ "/Docs/mobile#mobile" | absolute_url }}">Mobile</a></div>
-            <nav class="nav nav-pills flex-column">
+            <nav id="mobile-nav" class="nav nav-pills flex-column navHide">
               <div class="nav-link lvl-1 my-1" href="#app-store">
                 <a href="{{ "/Docs/mobile#app-store" | absolute_url }}">App Store</a></div>
               <nav class="nav nav-pills flex-column">
@@ -160,15 +161,17 @@
         {{ content }}
 
         <button onclick="topFunction()" id="btnTop" title="Go to top" class="d-lg-none d-xl-none">Top</button>
-        <a href="{% github_edit_link %}"><img class="githubBottom" src="{{site.octocat | relative_url}}"
-            alt="Contribute to Docs"></a>
+        <a href="{% github_edit_link %}"><img class="githubBottom" src="{{site.octocat | relative_url}}" alt="Contribute to Docs"></a>
       </div>
     </div>
   </div>
 
   <script>
     // Add scrollspy to <body>
-    $('body').scrollspy({ target: "#sparkitectureNav", offset: 60 });
+    $('body').scrollspy({
+      target: "#sparkitectureNav",
+      offset: 60
+    });
 
     // Add smooth scrolling on all links inside the navbar
     $("#sparkitectureNav a").on('click', function (event) {
@@ -211,7 +214,10 @@
       }
     }
 
-    window.onscroll = function () { scrollFunction() };
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
     function scrollFunction() {
       if (screen.width <= 1800) {
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -235,6 +241,35 @@
     $(function () {
       $('table').addClass('table-hover');
     });
+
+
+    $(window).on('activate.bs.scrollspy', function () {
+
+      
+      if ($('#getting-started-div').hasClass('active')) {
+        $('#getting-started-nav').removeClass('navHide');
+        $("#getting-started-nav").addClass("navShow");
+      } else {
+        $('#getting-started-nav').removeClass('navShow');
+        $("#getting-started-nav").addClass("navHide");
+      }
+
+      if ($('#common-operations-div').hasClass('active')) {
+        $('#common-operations-nav').removeClass('navHide');
+        $("#common-operations-nav").addClass("navShow");
+      } else {
+        $('#common-operations-nav').removeClass('navShow');
+        $("#common-operations-nav").addClass("navHide");
+      }
+
+      if ($('#mobile-div').hasClass('active')) {
+        $('#mobile-nav').removeClass('navHide');
+        $("#mobile-nav").addClass("navShow");
+      } else {
+        $('#mobile-nav').removeClass('navShow');
+        $("#mobile-nav").addClass("navHide");
+      }
+})
 
     // $('#themeSwitch').change(function () {
     //   if (this.checked) {
@@ -288,8 +323,7 @@
     //     $(this).removeClass('collapse');
     //     $(this).addClass('.collapse.show');
     //   }
-// })
-
+    // })
   </script>
 </body>
 
