@@ -15,6 +15,8 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
   - [Prerequisites](#prerequisites)
     - [Installing Prerequisites](#installing-prerequisites)
       - [Installing Node.js and npm](#installing-nodejs-and-npm)
+      - [Node version](#node-version)
+      - [Node Version Switcher ("nvs")](#node-version-switcher-nvs)
       - [Installing the Angular CLI](#installing-the-angular-cli)
   - [Setting Up Sparkitecture](#setting-up-sparkitecture)
     - [Getting source code and connecting to TFS](#getting-source-code-and-connecting-to-tfs)
@@ -27,15 +29,6 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
   - [Adding a Search Row](#adding-a-search-row)
   - [Adding the Command Template](#adding-the-command-template)
     - [Using the Command Template](#using-the-command-template)
-- [Mobile](./Docs/mobile.md#mobile)
-  - [App Store](./Docs/mobile.md#app-store)
-    - [Create a New App](./Docs/mobile.md#create-a-new-app)
-    - [Set Rating (App Store)](./Docs/mobile.md#set-rating-(app-store))
-    - [Set Category (App Store)](./Docs/mobile.md#set-category-(app-store))
-  - [Play Store](./Docs/mobile.md#play-store)
-    - [Set Rating (Play Store)](./Docs/mobile.md#set-rating-(play-store))
-    - [Set Category (Play Store)](./Docs/mobile.md#set-category-(play-store))
-    - [Additional Questions](./Docs/mobile.md#additional-questions)
 - [Built With](#built-with)
 - [Contributors](#contributors)
 - [Angular CLI Cheat Sheet](#angular-cli-cheat-sheet)
@@ -67,11 +60,23 @@ node -v
 npm -v
 ```
 
-##### Running Multiple Node.js Versions
+##### Node version
 
-- If you are running the current version of Node, you might not be running the Sparkitecture version of Node (LTS version)
-- To run multiple versions of Node on your machine, do the following
-  -Install nvs
+this app currently uses node version 14.7.1
+
+##### Node Version Switcher ("nvs")
+
+you can run multiple versions of node on your machine, by installing this library: [nvs](https://github.com/jasongin/nvs)
+
+`choco install nvs`
+
+`nvs add lts` adds lts: long-term service version ("now, 14.7.0")
+or
+`nvs add 14.7.1`
+
+once installed and every time you start with the project, make sure to set the version to 14.7.0 (lts, currently)
+
+`nvs use lts`
 
 ##### Installing the Angular CLI
 
