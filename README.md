@@ -67,6 +67,12 @@ node -v
 npm -v
 ```
 
+##### Running Multiple Node.js Versions
+
+- If you are running the current version of Node, you might not be running the Sparkitecture version of Node (LTS version)
+- To run multiple versions of Node on your machine, do the following
+  -Install nvs
+
 ##### Installing the Angular CLI
 
 To install the Angular CLI run the following command in your terminal window.
