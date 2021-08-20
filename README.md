@@ -22,6 +22,7 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
     - [Getting source code and connecting to TFS](#getting-source-code-and-connecting-to-tfs)
     - [Setting up the Server solution (Web Project)](#setting-up-the-server-solution-web-project)
     - [Setting up a local database](#setting-up-a-local-database)
+      - [Updating Seed Tables](#updating-seed-tables)
     - [Running the web app](#running-the-web-app)
       - [Running with the Angular CLI](#running-with-the-angular-cli)
 - [Common Operations](#common-operations)
@@ -145,6 +146,15 @@ This builds the Angular project and will notify you if any errors occurred in th
 - Click "Publish"
 
 Your local Sparkitecture database schema should now match that of source control
+
+##### Updating Seed Tables
+
+- Role table, for instance, comes with default values.  If you need additional roles:
+  - Navigate to Database Project > Scripts > Data ![Seed Table Nav](/Assets/Images/Seed_Nav.jpg)
+  - Inspect the Seed.sql script.  It should employ a MERGE command
+    - If it doesn't execute this in Management Studio: sp_generate_merge 'Role'
+    - click the generated link in the results section
+    - copy the MERGE script into the Seed.Role.sql file
 
 #### Running the web app
 
