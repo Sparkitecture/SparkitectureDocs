@@ -22,14 +22,17 @@ Sparkitecture is a series of solutions aimed at cutting down development time at
     - [Getting source code and connecting to TFS](#getting-source-code-and-connecting-to-tfs)
     - [Setting up the Server solution (Web Project)](#setting-up-the-server-solution-web-project)
     - [Setting up a local database](#setting-up-a-local-database)
-      - [Updating Seed Tables](#updating-seed-tables)
     - [Running the web app](#running-the-web-app)
       - [Running with the Angular CLI](#running-with-the-angular-cli)
+    - [Quality of Life](#quality-of-life)
+      - [Sparkitecture Item Templates for Visual Studio](#sparkitecture-item-templates-for-visual-studio)
 - [Common Operations](#common-operations)
   - [Create a New Component](#create-a-new-component)
   - [Adding a Search Row](#adding-a-search-row)
   - [Adding the Command Template](#adding-the-command-template)
     - [Using the Command Template](#using-the-command-template)
+  - [Default Values](#default-values)
+    - [Updating Seed Tables](#updating-seed-tables)
 - [Built With](#built-with)
 - [Contributors](#contributors)
 - [Angular CLI Cheat Sheet](#angular-cli-cheat-sheet)
@@ -147,15 +150,6 @@ This builds the Angular project and will notify you if any errors occurred in th
 
 Your local Sparkitecture database schema should now match that of source control
 
-##### Updating Seed Tables
-
-- Role table, for instance, comes with default values.  If you need additional roles:
-  - Navigate to Database Project > Scripts > Data ![Seed Table Nav](/Assets/Images/Seed_Nav.jpg)
-  - Inspect the Seed.sql script.  It should employ a MERGE command
-    - If it doesn't execute this in Management Studio: sp_generate_merge 'Role'
-    - click the generated link in the results section
-    - copy the MERGE script into the Seed.Role.sql file
-
 #### Running the web app
 
 - In Visual Studio, ensure the "Web" project is set as the startup project
@@ -173,6 +167,20 @@ ng serve
 - In Visual Studio press F5
 
 This builds and serves your app, rebuilding on file changes
+
+#### Quality of Life
+
+##### Sparkitecture Item Templates for Visual Studio
+
+- With Sparkitecture Item Templates, you can select common Sparkitecture objects.  Visual Studio will generate a scaffold for that Sparkitecture object ![Sparkitecture Item Template](/Assets/Images/SparkItemTemplate.jpg)
+  
+- You access Item Templates with this navigation, for instance: ![Item Template Nav](/Assets/Images/NewItemNav.jpg)
+
+- Copy Command.zip from your Sparkitecture solution's documentation directory ![Command.zip](/Assets/Images/CommandZip.jpg)
+- Navigate to the *ItemTemplates* directory inside of your **Documents** ![ItemTemplate Destination](/Assets/Images/ItemTemplateDestination.jpg)
+- Create a *Sparkitecture* folder
+- Paste Command.zip inside *Sparkitecture* folder
+- Restart Visual Studio  
 
 ## Common Operations
 
@@ -257,6 +265,18 @@ Now the Sparkitecture Command templates have been added to Visual Studio!
   - SparkitectureDocsTestCommand.cs
   - SparkitectureDocsTestCommandRequest.cs
   - SparkitectureDocsTestCommandResponse.cs
+
+### Default Values
+
+#### Updating Seed Tables
+
+- In the development phase, you might find it necessary to add more "default" values.  The Azure DevOps Pipeline process will run over these SQL scripts each time.
+- Role table, for instance, comes with default values.  If you need additional roles:
+  - Navigate to Database Project > Scripts > Data ![Seed Table Nav](/Assets/Images/Seed_Nav.jpg)
+  - Inspect the Seed.sql script.  It should employ a MERGE command
+    - If it doesn't execute this in Management Studio: sp_generate_merge 'Role'
+    - click the generated link in the results section
+    - copy the MERGE script into the Seed.Role.sql file
 
 ## Built With
 
